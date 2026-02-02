@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -52,10 +52,10 @@ export default function ContactPage() {
           className="text-center"
         >
           <h1 className="font-heading text-5xl md:text-6xl text-foreground mb-6">
-            Get in Touch
+            Let's Connect
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-            Ready to start your journey? I'd love to hear from you and discuss how I can support your family.
+            I'm here to support you with questions about breastfeeding, postpartum nutrition, or infant feeding. Reach out anytime—I'd love to hear from you.
           </p>
         </motion.div>
       </section>
@@ -80,31 +80,11 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <a
-                    href="mailto:hello@nurturenourish.com"
+                    href="mailto:lactoloves@gmail.com"
                     className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
                   >
-                    hello@nurturenourish.com
+                    lactoloves@gmail.com
                   </a>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-muted-peach border-none shadow-md rounded-3xl">
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-secondary rounded-full flex items-center justify-center mb-4">
-                    <Phone className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="font-heading text-xl text-foreground mb-2">
-                    Phone
-                  </h3>
-                  <a
-                    href="tel:+919876543210"
-                    className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
-                  >
-                    +91 98765 43210
-                  </a>
-                  <p className="font-paragraph text-sm text-foreground/70 mt-2">
-                    Available Mon-Fri, 9am-6pm IST
-                  </p>
                 </CardContent>
               </Card>
 
@@ -114,13 +94,24 @@ export default function ContactPage() {
                     <MapPin className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="font-heading text-xl text-foreground mb-2">
-                    Location
+                    Availability
                   </h3>
-                  <p className="font-paragraph text-base text-foreground">
-                    Mumbai, India
+                  <p className="font-paragraph text-base text-foreground mb-2">
+                    Virtual consultations available in India, USA, and worldwide
                   </p>
-                  <p className="font-paragraph text-sm text-foreground/70 mt-2">
-                    Online consultations available worldwide
+                  <p className="font-paragraph text-sm text-foreground/70">
+                    Online support group for mothers
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-muted-peach border-none shadow-md rounded-3xl">
+                <CardContent className="p-8">
+                  <h3 className="font-heading text-xl text-foreground mb-3">
+                    Join Our Community
+                  </h3>
+                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                    Connect with other mothers in our virtual support group. Share experiences, ask questions, and find community.
                   </p>
                 </CardContent>
               </Card>
@@ -139,13 +130,13 @@ export default function ContactPage() {
                     Send a Message
                   </h2>
                   <p className="font-paragraph text-base text-foreground mb-8">
-                    Fill out the form below and I'll get back to you within 24 hours.
+                    Have questions about breastfeeding, postpartum nutrition, or infant feeding? I'd love to help. Fill out the form below and I'll get back to you soon.
                   </p>
 
                   {submitted && (
                     <div className="bg-secondary border border-primary/20 rounded-2xl p-6 mb-8">
                       <p className="font-paragraph text-base text-foreground text-center">
-                        Thank you for reaching out! I'll respond to your message soon.
+                        Thank you for reaching out! I'll respond to your message soon. You don't have to do this alone—I'm here to support you.
                       </p>
                     </div>
                   )}
@@ -212,7 +203,7 @@ export default function ContactPage() {
                           value={formData.subject}
                           onChange={handleChange}
                           required
-                          placeholder="How can I help?"
+                          placeholder="What can I help with?"
                           className="rounded-2xl border-secondary bg-background"
                         />
                       </div>
@@ -249,79 +240,26 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="w-full bg-muted-peach py-16 md:py-24">
+      {/* Warm Closing Section */}
+      <section className="w-full bg-secondary py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
-              Before You Reach Out
+            <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
+              You Don't Have to Do This Alone
             </h2>
-            <p className="font-paragraph text-lg text-foreground max-w-3xl mx-auto">
-              Here are answers to some common questions
+            <p className="font-paragraph text-lg md:text-xl text-foreground leading-relaxed mb-8">
+              Motherhood can feel overwhelming, but you have support. Whether you're struggling with breastfeeding, navigating postpartum recovery, or wondering about your baby's feeding, I'm here for you.
+            </p>
+            <p className="font-paragraph text-lg text-foreground leading-relaxed">
+              Reach out with your questions, concerns, or just to chat. I'm here to support you every step of the way. <span className="font-semibold">I'm here to support you.</span>
             </p>
           </motion.div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <Card className="bg-background border-none shadow-md rounded-3xl">
-                <CardContent className="p-8">
-                  <h3 className="font-heading text-xl text-foreground mb-3">
-                    How quickly will I hear back?
-                  </h3>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
-                    I typically respond to all inquiries within 24 hours during business days. For urgent matters, please call directly.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <Card className="bg-background border-none shadow-md rounded-3xl">
-                <CardContent className="p-8">
-                  <h3 className="font-heading text-xl text-foreground mb-3">
-                    Do you offer virtual consultations?
-                  </h3>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
-                    Yes! I provide both in-person (Mumbai area) and virtual consultations via video call for families worldwide.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Card className="bg-background border-none shadow-md rounded-3xl">
-                <CardContent className="p-8">
-                  <h3 className="font-heading text-xl text-foreground mb-3">
-                    What should I prepare for my first consultation?
-                  </h3>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
-                    I'll send you a detailed intake form before our session. Come with any questions and be ready to discuss your feeding journey openly.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
         </div>
       </section>
 

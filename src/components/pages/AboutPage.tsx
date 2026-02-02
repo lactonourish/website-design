@@ -9,23 +9,23 @@ export default function AboutPage() {
   const credentials = [
     {
       icon: Award,
-      title: 'Certified Lactation consultant',
-      description: 'International Board Certified Lactation Consultant with over 8 years of experience'
+      title: 'Certified Lactation Counselor',
+      description: 'Dedicated to supporting mothers and babies through evidence-based lactation guidance'
     },
     {
       icon: BookOpen,
-      title: 'Nutritionist',
-      description: 'Specialized in maternal and infant nutrition with evidence-based approaches'
+      title: 'Maternal Nutritionist',
+      description: 'Specialized in postpartum recovery and infant nutrition with practical, compassionate support'
     },
     {
       icon: Users,
       title: '500+ Families Supported',
-      description: 'Helped families across India and globally achieve their feeding goals'
+      description: 'Honored to have guided families across India, USA, and worldwide on their feeding journeys'
     },
     {
       icon: Heart,
-      title: 'Holistic Care',
-      description: 'Integrating physical, emotional, and cultural aspects of infant feeding'
+      title: 'Holistic, Non-Judgmental Care',
+      description: 'Supporting mothers with evidence-based guidance, practical wisdom, and deep compassion'
     }
   ];
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
             About Me
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-            Passionate about empowering families through evidence-based lactation and nutrition support
+            Supporting mothers and babies with warmth, evidence, and practical wisdom
           </p>
         </motion.div>
       </section>
@@ -61,9 +61,9 @@ export default function AboutPage() {
             >
               <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">Hello, I'm Ananyaa Mohan</h2>
               <div className="space-y-4 font-paragraph text-base text-foreground leading-relaxed">
-                <p>Motherhood is powerful, beautiful — and sometimes overwhelming. My work is rooted in the belief that every mother deserves support, understanding, and reliable guidance during this transformative time.</p>
-                <p>I am a Certified Lactation Counselor and maternal nutrition professional with a background in public health and clinical nutrition. Over the past three years, I have worked extensively in maternal and child health programs, supporting families with breastfeeding, nutrition, and infant care.</p>
-                <p>I’ve had the privilege of counseling hundreds of mothers and caregivers, helping them make informed feeding decisions, overcome challenges, and build confidence in caring for their babies. My approach blends science, empathy, and cultural sensitivity — because no two motherhood journeys are the same. My Approach🌿 Evidence-based🤍 Non-judgmental🍼 Baby-led and mother-centered💛 Gentle, practical, and realistic</p>
+                <p>Motherhood is beautiful, powerful, and sometimes overwhelming. There are moments when you're unsure if you're doing it right, when feeding challenges feel isolating, or when your body and mind need extra care. That's where I come in.</p>
+                <p>I'm a Certified Lactation Counselor and maternal nutritionist with over 3 years of experience supporting families through their feeding journeys. I've had the privilege of working with 500+ families across India, the USA, and worldwide through virtual consultations. Whether you're navigating breastfeeding challenges, recovering postpartum, or introducing your baby to solid foods, I'm here to guide you with evidence-based advice and genuine compassion.</p>
+                <p>My approach is simple: you deserve support that feels personal, practical, and judgment-free. I combine the latest research with real-world wisdom, respecting your unique circumstances and cultural values. Beyond one-on-one consultations, I host a virtual online support group where mothers connect, share, and find community. I also offer occasional workshops on maternal and infant nutrition to help you feel confident and informed.</p>
               </div>
             </motion.div>
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      {/* Credentials Section */}
+      {/* My Approach Section */}
       <section className="w-full py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
@@ -99,10 +99,10 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-4">
-              Credentials & Experience
+              My Approach
             </h2>
             <p className="font-paragraph text-lg text-foreground max-w-3xl mx-auto">
-              Qualified expertise to support your family's health and wellbeing
+              How I support you and your family
             </p>
           </motion.div>
 
@@ -144,17 +144,17 @@ export default function AboutPage() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-8 text-center">
-              My Philosophy of Care
+              My Core Values
             </h2>
             
             <div className="space-y-8">
               <Card className="bg-background border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
                   <h3 className="font-heading text-2xl text-foreground mb-4">
-                    Evidence-Based & Compassionate
+                    Non-Judgmental Care
                   </h3>
                   <p className="font-paragraph text-base text-foreground leading-relaxed">
-                    I believe in combining the latest scientific research with deep empathy and understanding. Every recommendation I make is grounded in evidence, but delivered with the warmth and support you deserve during this vulnerable time.
+                    Every mother's journey is unique. I'm here to listen, support, and guide without judgment—whether you're exclusively breastfeeding, formula feeding, or combining both. Your choices matter, and you deserve respect.
                   </p>
                 </CardContent>
               </Card>
@@ -162,10 +162,10 @@ export default function AboutPage() {
               <Card className="bg-background border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
                   <h3 className="font-heading text-2xl text-foreground mb-4">
-                    Culturally Sensitive
+                    Evidence-Based Support
                   </h3>
                   <p className="font-paragraph text-base text-foreground leading-relaxed">
-                    I honor the rich traditions of Indian postpartum care while integrating modern nutritional science. Whether you're following traditional practices or seeking contemporary approaches, I respect your choices and work within your cultural framework.
+                    I combine the latest research with real-world experience to give you guidance you can trust. Every recommendation is grounded in science, but delivered with warmth and understanding for your specific situation.
                   </p>
                 </CardContent>
               </Card>
@@ -173,10 +173,10 @@ export default function AboutPage() {
               <Card className="bg-background border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
                   <h3 className="font-heading text-2xl text-foreground mb-4">
-                    Personalized Support
+                    Practical Guidance
                   </h3>
                   <p className="font-paragraph text-base text-foreground leading-relaxed">
-                    No two families are alike. I take the time to understand your unique circumstances, challenges, and goals, creating a customized care plan that works for you and your baby. Your success is my priority.
+                    I believe in solutions that work in real life. My advice is practical, actionable, and tailored to your circumstances—not one-size-fits-all recommendations that don't fit your family's needs.
                   </p>
                 </CardContent>
               </Card>
@@ -184,10 +184,10 @@ export default function AboutPage() {
               <Card className="bg-background border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
                   <h3 className="font-heading text-2xl text-foreground mb-4">
-                    Empowerment Through Education
+                    Culturally Respectful
                   </h3>
                   <p className="font-paragraph text-base text-foreground leading-relaxed">
-                    Knowledge is power. I'm committed to educating you about infant feeding and maternal nutrition so you can make informed decisions with confidence. My goal is to empower you, not create dependency.
+                    I honor the rich traditions of postpartum care while integrating modern nutrition science. Whether you're following traditional practices or contemporary approaches, I work within your cultural framework with respect and understanding.
                   </p>
                 </CardContent>
               </Card>
@@ -195,6 +195,71 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Community Section */}
+      <section className="w-full py-16 md:py-24 bg-background">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
+              Beyond One-on-One Support
+            </h2>
+            <p className="font-paragraph text-lg text-foreground max-w-3xl mx-auto mb-8">
+              I believe in building community and empowering mothers through connection and education.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              <Card className="bg-muted-peach border-none shadow-md rounded-3xl">
+                <CardContent className="p-8">
+                  <h3 className="font-heading text-2xl text-foreground mb-4">
+                    Virtual Support Group
+                  </h3>
+                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                    Join a warm, welcoming community of mothers where you can share experiences, ask questions, and find support from others on similar journeys. You're never alone in this.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-muted-peach border-none shadow-md rounded-3xl">
+                <CardContent className="p-8">
+                  <h3 className="font-heading text-2xl text-foreground mb-4">
+                    Workshops & Education
+                  </h3>
+                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                    I offer occasional workshops on maternal and infant nutrition, breastfeeding preparation, and postpartum recovery. Knowledge is empowerment.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-full py-16 md:py-24 bg-secondary">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
+              Let's Connect
+            </h2>
+            <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto">
+              Whether you have questions, need support, or just want to chat about your motherhood journey, I'm here for you. Reach out anytime—I'd love to hear from you.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
