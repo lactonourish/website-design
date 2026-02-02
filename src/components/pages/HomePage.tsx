@@ -129,16 +129,14 @@ export default function HomePage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-secondary/50 backdrop-blur-sm w-fit mb-8 shadow-sm">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-secondary-foreground tracking-wide uppercase">Compassionate Care for New Families</span>
+              <span className="text-sm font-medium text-secondary-foreground tracking-wide uppercase">Nurturing Mothers. Nourishing Babies. Supporting Every Step.</span>
             </div>
             
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-secondary-foreground mb-8 leading-[1.1] text-balance">
               Evidence-Based <span className="text-primary italic">Lactation</span> & Nutrition Support
             </h1>
             
-            <p className="font-paragraph text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl text-balance">
-              Empowering you with the knowledge, confidence, and gentle guidance needed for a thriving breastfeeding and postpartum journey.
-            </p>
+            <p className="font-paragraph text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl text-balance">Evidence-based lactation, postpartum, and infant nutrition support to help you feel confident, informed, and cared for in your motherhood journey.</p>
             
             <div className="flex flex-col sm:flex-row gap-5">
               <Link to="/contact">
