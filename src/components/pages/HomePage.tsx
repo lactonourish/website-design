@@ -56,27 +56,27 @@ export default function HomePage() {
   const services = [
     {
       icon: Heart,
-      title: '1:1 Lactation Consults',
-      description: 'Personalized support for breastfeeding challenges, latch issues, and milk supply concerns.',
-      link: '/services#lactation'
+      title: 'Breastfeeding Support',
+      description: 'Personalized 1:1 consultations for latch issues, milk supply concerns, and feeding challenges.',
+      link: '/services#breastfeeding'
     },
     {
       icon: Baby,
       title: 'Postpartum Nutrition',
-      description: 'Evidence-based nutrition guidance to support your recovery and milk production.',
+      description: 'Evidence-based nutrition guidance to support your recovery, energy, and milk production.',
       link: '/services#nutrition'
     },
     {
       icon: BookOpen,
-      title: 'Infant Feeding Guidance',
-      description: 'Expert advice on introducing solids, managing allergies, and healthy eating habits.',
+      title: 'Infant Feeding Education',
+      description: 'Expert guidance on introducing solids, managing allergies, and building healthy eating habits.',
       link: '/services#infant-feeding'
     },
     {
       icon: Calendar,
-      title: 'Prenatal Education',
-      description: 'Prepare for your breastfeeding journey with comprehensive prenatal classes.',
-      link: '/services#prenatal'
+      title: 'Online Support Community',
+      description: 'Connect with other mothers in our supportive group for shared experiences and guidance.',
+      link: '/services#community'
     }
   ];
 
@@ -129,24 +129,26 @@ export default function HomePage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-secondary/50 backdrop-blur-sm w-fit mb-8 shadow-sm">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-secondary-foreground tracking-wide uppercase">Nurturing Mothers. Nourishing Babies. Supporting Every Step.</span>
+              <span className="text-sm font-medium text-secondary-foreground tracking-wide uppercase">Supporting Confident Motherhood & Healthy Babies</span>
             </div>
             
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-secondary-foreground mb-8 leading-[1.1] text-balance">
-              Evidence-Based <span className="text-primary italic">Lactation</span> & Nutrition Support
+              Breastfeeding & <span className="text-primary italic">Nutrition</span> Support for Every Mother
             </h1>
             
-            <p className="font-paragraph text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl text-balance">Evidence-based lactation, postpartum, and infant nutrition support to help you feel confident, informed, and cared for in your motherhood journey.</p>
+            <p className="font-paragraph text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl text-balance">
+              I'm a Certified Lactation Counselor (CLC) and maternal nutritionist with 3+ years of experience supporting over 500 families. I provide evidence-based guidance on breastfeeding, postpartum nutrition, and infant feeding—available through virtual consultations and an online support community.
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link to="/contact">
+              <Link to="/#book">
                 <Button className="h-14 px-10 rounded-full bg-primary hover:bg-primary/90 text-white text-lg font-medium shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:shadow-xl">
                   Book a Consultation
                 </Button>
               </Link>
-              <Link to="/services">
+              <Link to="/#community">
                 <Button variant="outline" className="h-14 px-10 rounded-full border-2 border-secondary text-secondary-foreground hover:bg-secondary/20 text-lg font-medium transition-all hover:scale-105 bg-transparent">
-                  Explore Services
+                  Join the Support Community
                 </Button>
               </Link>
             </div>
@@ -191,7 +193,7 @@ export default function HomePage() {
                   <span className="font-heading font-bold text-lg text-secondary-foreground">Certified Expert</span>
                 </div>
                 <p className="text-sm text-foreground/70 leading-snug">
-                  IBCLC Certified Lactation Consultant & Registered Dietitian
+                  Certified Lactation Counselor (CLC) & Maternal Nutritionist
                 </p>
               </motion.div>
             </div>
@@ -229,22 +231,22 @@ export default function HomePage() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="font-heading text-4xl md:text-6xl text-secondary-foreground mb-8">
-                  Nurturing the <span className="text-primary">Nurturer</span>
+                  Supporting Mothers, <span className="text-primary">Nourishing</span> Families
                 </h2>
                 <div className="space-y-6 text-lg md:text-xl text-foreground/80 font-paragraph leading-relaxed">
                   <p>
-                    I believe that when a mother is supported, the whole family thrives. My approach blends clinical expertise with deep empathy, recognizing that every dyad is unique.
+                    I believe that when a mother is supported with evidence-based care and compassion, the whole family thrives. With 3+ years of experience supporting over 500 families, I provide personalized guidance tailored to your unique journey.
                   </p>
                   <p>
-                    Whether you are preparing for birth, navigating the first latch, or introducing solids, I provide a judgment-free space where your intuition is honored and your confidence is built upon evidence-based care.
+                    Whether you're navigating breastfeeding challenges, seeking postpartum nutrition support, or introducing solids, I create a judgment-free space where your concerns are heard, your intuition is honored, and your confidence is built on solid, evidence-based care.
                   </p>
                 </div>
                 <div className="mt-10 pt-10 border-t border-secondary/30">
                   <div className="grid grid-cols-3 gap-8">
                     {[
-                      { label: "Years Experience", value: "10+" },
-                      { label: "Families Helped", value: "2k+" },
-                      { label: "Workshops", value: "50+" }
+                      { label: "Years Experience", value: "3+" },
+                      { label: "Families Supported", value: "500+" },
+                      { label: "Global Reach", value: "Worldwide" }
                     ].map((stat, idx) => (
                       <div key={idx}>
                         <div className="font-heading text-3xl md:text-4xl text-primary font-bold mb-1">{stat.value}</div>
