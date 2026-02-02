@@ -14,7 +14,7 @@ export default function AboutPage() {
     },
     {
       icon: BookOpen,
-      title: 'Registered Dietitian',
+      title: 'Nutritionist',
       description: 'Specialized in maternal and infant nutrition with evidence-based approaches'
     },
     {
@@ -76,11 +76,13 @@ export default function AboutPage() {
             >
               <div className="rounded-3xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://static.wixstatic.com/media/7adb49_df1ddd3c999a4d0ca6ee7637a1c418c0~mv2.png?originWidth=576&originHeight=896"
-                  alt="Priya Sharma, Lactation Consultant and Nutritionist"
+                  src="https://static.wixstatic.com/media/7adb49_2a8b72f8c5a346a2b7039a0985342fb9~mv2.jpg"
                   width={600}
                   className="w-full h-auto"
-                />
+                  originWidth={4096}
+                  originHeight={3072}
+                  focalPointX={63.58642578125}
+                  focalPointY={51.432291666666664} />
               </div>
             </motion.div>
           </div>
