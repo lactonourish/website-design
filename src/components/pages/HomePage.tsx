@@ -105,9 +105,7 @@ export default function HomePage() {
         .clip-soft-shape { clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); }
         .clip-organic-blob { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
       `}</style>
-
       <Header />
-
       {/* ---------------------------------------------------------------------------
           HERO SECTION: The Nurturing Sanctuary
           --------------------------------------------------------------------------- */}
@@ -159,11 +157,7 @@ export default function HomePage() {
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-secondary/30 overflow-hidden">
-                     <Image 
-                        src="https://static.wixstatic.com/media/7adb49_626d9a17055f4575a6c118a5f1422db3~mv2.png?originWidth=1152&originHeight=768" 
-                        alt="User avatar" 
-                        className="w-full h-full object-cover opacity-80"
-                      />
+
                   </div>
                 ))}
               </div>
@@ -206,7 +200,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ---------------------------------------------------------------------------
           PHILOSOPHY SECTION: The Bridge
           --------------------------------------------------------------------------- */}
@@ -267,7 +260,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ---------------------------------------------------------------------------
           SERVICES SECTION: Dynamic Cards
           --------------------------------------------------------------------------- */}
@@ -340,7 +332,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ---------------------------------------------------------------------------
           JOURNEY SECTION: Process Steps (New Narrative)
           --------------------------------------------------------------------------- */}
@@ -378,7 +369,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ---------------------------------------------------------------------------
           TESTIMONIALS SECTION: Social Proof
           --------------------------------------------------------------------------- */}
@@ -401,9 +391,9 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {isLoadingTestimonials ? (
                // Loading State Skeleton
-               [1, 2, 3].map((i) => (
+               ([1, 2, 3].map((i) => (
                  <div key={i} className="h-80 bg-white/50 rounded-[2rem] animate-pulse" />
-               ))
+               )))
             ) : testimonials.length > 0 ? (
               testimonials.map((testimonial, index) => (
                 <motion.div
@@ -465,7 +455,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ---------------------------------------------------------------------------
           FAQ SECTION: Accordion Style
           --------------------------------------------------------------------------- */}
@@ -520,7 +509,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ---------------------------------------------------------------------------
           CTA SECTION: Final Call
           --------------------------------------------------------------------------- */}
@@ -565,7 +553,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

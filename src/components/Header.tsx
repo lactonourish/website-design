@@ -23,9 +23,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="font-heading text-2xl md:text-3xl text-primary font-bold">
-              Nurture & Nourish
-            </span>
+            <span className="font-heading text-2xl md:text-3xl text-primary font-bold">LactoNourish</span>
           </Link>
 
           {/* Desktop Navigation */}
