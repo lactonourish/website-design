@@ -9,7 +9,7 @@ export default function AboutPage() {
   const credentials = [
     {
       icon: Award,
-      title: 'IBCLC Certified',
+      title: 'Certified Lactation consultant',
       description: 'International Board Certified Lactation Consultant with over 8 years of experience'
     },
     {
@@ -32,7 +32,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
       {/* Hero Section */}
       <section className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24">
         <motion.div
@@ -49,7 +48,6 @@ export default function AboutPage() {
           </p>
         </motion.div>
       </section>
-
       {/* Introduction Section */}
       <section className="w-full bg-muted-peach py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -61,19 +59,11 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="order-2 md:order-1"
             >
-              <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">
-                Hello, I'm Priya Sharma
-              </h2>
+              <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">Hello, I'm Ananyaa Mohan</h2>
               <div className="space-y-4 font-paragraph text-base text-foreground leading-relaxed">
-                <p>
-                  As an International Board Certified Lactation Consultant (IBCLC) and Registered Dietitian, I've dedicated my career to supporting families during one of life's most transformative journeys—welcoming a new baby.
-                </p>
-                <p>
-                  My approach combines the latest research in lactation science and maternal nutrition with deep cultural sensitivity and compassion. I understand that every family's journey is unique, and I'm here to provide personalized support that honors your values, circumstances, and goals.
-                </p>
-                <p>
-                  Whether you're navigating breastfeeding challenges, seeking nutrition guidance for postpartum recovery, or preparing for your baby's arrival, I'm committed to walking alongside you with evidence-based care and unwavering support.
-                </p>
+                <p>Motherhood is powerful, beautiful — and sometimes overwhelming. My work is rooted in the belief that every mother deserves support, understanding, and reliable guidance during this transformative time.</p>
+                <p>I am a Certified Lactation Counselor and maternal nutrition professional with a background in public health and clinical nutrition. Over the past three years, I have worked extensively in maternal and child health programs, supporting families with breastfeeding, nutrition, and infant care.</p>
+                <p>I’ve had the privilege of counseling hundreds of mothers and caregivers, helping them make informed feeding decisions, overcome challenges, and build confidence in caring for their babies. My approach blends science, empathy, and cultural sensitivity — because no two motherhood journeys are the same. My Approach🌿 Evidence-based🤍 Non-judgmental🍼 Baby-led and mother-centered💛 Gentle, practical, and realistic</p>
               </div>
             </motion.div>
 
@@ -96,7 +86,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Credentials Section */}
       <section className="w-full py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -142,7 +131,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Philosophy Section */}
       <section className="w-full bg-secondary py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -205,7 +193,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
