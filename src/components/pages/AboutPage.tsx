@@ -32,6 +32,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      
       {/* Hero Section */}
       <section className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24">
         <motion.div
@@ -48,6 +49,7 @@ export default function AboutPage() {
           </p>
         </motion.div>
       </section>
+
       {/* Introduction Section */}
       <section className="w-full bg-muted-peach py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -62,8 +64,8 @@ export default function AboutPage() {
               <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">Hello, I'm Ananyaa Mohan</h2>
               <div className="space-y-4 font-paragraph text-base text-foreground leading-relaxed">
                 <p>Motherhood is beautiful, powerful, and sometimes overwhelming. There are moments when you're unsure if you're doing it right, when feeding challenges feel isolating, or when your body and mind need extra care. That's where I come in.</p>
+                <p>I believe every mother deserves care, reassurance, and evidence-based guidance without pressure or judgment. My role is to walk alongside you, helping you feel confident in feeding and caring for your baby in a way that feels right for your family.</p>
                 <p>I'm a Certified Lactation Counselor and maternal nutritionist with over 3 years of experience supporting families through their feeding journeys. I've had the privilege of working with 500+ families across India, the USA, and worldwide through virtual consultations. Whether you're navigating breastfeeding challenges, recovering postpartum, or introducing your baby to solid foods, I'm here to guide you with evidence-based advice and genuine compassion.</p>
-                <p>My approach is simple: you deserve support that feels personal, practical, and judgment-free. I combine the latest research with real-world wisdom, respecting your unique circumstances and cultural values. Beyond one-on-one consultations, I host a virtual online support group where mothers connect, share, and find community. I also offer occasional workshops on maternal and infant nutrition to help you feel confident and informed.</p>
               </div>
             </motion.div>
 
@@ -82,12 +84,15 @@ export default function AboutPage() {
                   originWidth={4096}
                   originHeight={3072}
                   focalPointX={63.58642578125}
-                  focalPointY={51.432291666666664} />
+                  focalPointY={51.432291666666664}
+                  alt="Ananyaa Mohan, Certified Lactation Counselor"
+                />
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
       {/* My Approach Section */}
       <section className="w-full py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -133,7 +138,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      {/* Philosophy Section */}
+
+      {/* Core Values Section */}
       <section className="w-full bg-secondary py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
@@ -196,7 +202,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Community Section */}
+      {/* Beyond Consultations Section */}
       <section className="w-full py-16 md:py-24 bg-background">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
@@ -207,7 +213,7 @@ export default function AboutPage() {
             className="text-center"
           >
             <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
-              Beyond One-on-One Support
+              Beyond Consultations
             </h2>
             <p className="font-paragraph text-lg text-foreground max-w-3xl mx-auto mb-8">
               I believe in building community and empowering mothers through connection and education.

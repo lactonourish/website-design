@@ -21,7 +21,7 @@ export default function BlogPage() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  const categories = ['All', 'Breastfeeding Tips', 'Postpartum Nutrition', 'Baby Feeding & Nutrition', 'Recipes'];
+  const categories = ['All', 'Breastfeeding Tips', 'Postpartum Nutrition', 'Baby Feeding', 'Postpartum Healing Recipes'];
 
   useEffect(() => {
     loadPosts();
@@ -87,38 +87,11 @@ export default function BlogPage() {
             Blog & Resources
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-8">
-            Weekly posts on breastfeeding, postpartum recovery, maternal nutrition, baby feeding, and nourishing recipes
+            This blog shares weekly guidance, practical tips, and nourishing recipes for mothers and babies. From breastfeeding challenges to postpartum recovery, infant feeding to maternal nutrition—I'm here to support you with evidence-based advice and gentle wisdom.
           </p>
         </motion.div>
 
-        {/* Blog Introduction */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto bg-muted-peach rounded-3xl p-8 md:p-12"
-        >
-          <p className="font-paragraph text-base md:text-lg text-foreground leading-relaxed mb-6">
-            Welcome to my blog—a space dedicated to supporting you with practical tips, evidence-based guidance, and gentle wisdom for your motherhood journey.
-          </p>
-          <div className="space-y-4 font-paragraph text-base text-foreground leading-relaxed">
-            <p>
-              <span className="font-semibold">Practical Tips for New Mothers:</span> From managing sleep deprivation to navigating the early days, I share real-world advice that actually works.
-            </p>
-            <p>
-              <span className="font-semibold">Evidence-Based Guidance:</span> Every article is grounded in research, but written in a warm, accessible way—no medical jargon, just clear information you can trust.
-            </p>
-            <p>
-              <span className="font-semibold">Easy Recipes for Postpartum Recovery:</span> Nourishing, delicious recipes designed to support your healing and energy during the postpartum period.
-            </p>
-            <p>
-              <span className="font-semibold">Gentle Feeding Advice:</span> From breastfeeding challenges to introducing solids, I offer compassionate guidance for every stage of your baby's feeding journey.
-            </p>
-          </div>
-          <p className="font-paragraph text-base text-foreground leading-relaxed mt-6">
-            <span className="font-semibold">Subscribe for weekly tips and nourishing recipes.</span> Join our community and never miss an article that might help you feel more confident and supported.
-          </p>
-        </motion.div>
+
       </section>
 
       {/* Search and Filter */}

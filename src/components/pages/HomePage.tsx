@@ -1,4 +1,3 @@
-// HPI 1.7-G
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Baby, BookOpen, Calendar, CheckCircle, ChevronRight, Star, ArrowRight, Sparkles } from 'lucide-react';
@@ -9,18 +8,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { BaseCrudService } from '@/integrations';
 import { Testimonials, FrequentlyAskedQuestions } from '@/entities';
-import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function HomePage() {
-  // ---------------------------------------------------------------------------
-  // DATA FIDELITY PROTOCOL: CANONICAL DATA SOURCES
-  // ---------------------------------------------------------------------------
   const [testimonials, setTestimonials] = useState<Testimonials[]>([]);
   const [faqs, setFaqs] = useState<FrequentlyAskedQuestions[]>([]);
   const [isLoadingTestimonials, setIsLoadingTestimonials] = useState(true);
   const [isLoadingFaqs, setIsLoadingFaqs] = useState(true);
 
-  // PRESERVE: Original Data Fetching Logic
   useEffect(() => {
     loadTestimonials();
     loadFaqs();
@@ -52,37 +47,33 @@ export default function HomePage() {
     }
   };
 
-  // PRESERVE: Original Services Data
   const services = [
     {
       icon: Heart,
-      title: 'Breastfeeding Support',
-      description: 'Personalized 1:1 consultations for latch issues, milk supply concerns, and feeding challenges.',
-      link: '/services#breastfeeding'
+      title: 'Who I Support',
+      description: 'New moms, expecting parents, breastfeeding challenges, starting solids',
+      link: '/services#lactation'
     },
     {
       icon: Baby,
-      title: 'Postpartum Nutrition',
-      description: 'Evidence-based nutrition guidance to support your recovery, energy, and milk production.',
+      title: 'How Support Works',
+      description: 'Book a consultation → Receive personalized guidance → Ongoing support or community care',
       link: '/services#nutrition'
     },
     {
       icon: BookOpen,
-      title: 'Infant Feeding Education',
-      description: 'Expert guidance on introducing solids, managing allergies, and building healthy eating habits.',
+      title: 'How This Helps You',
+      description: 'Confidence feeding your baby, better milk supply, postpartum recovery, less stress',
       link: '/services#infant-feeding'
     },
     {
       icon: Calendar,
-      title: 'Online Support Community',
-      description: 'Connect with other mothers in our supportive group for shared experiences and guidance.',
-      link: '/services#community'
+      title: 'Why Families Trust LactoNourish',
+      description: '3+ years supporting mothers, 500+ families, CLC & nutritionist, gentle approach, worldwide',
+      link: '/services#prenatal'
     }
   ];
 
-  // ---------------------------------------------------------------------------
-  // ANIMATION HOOKS & REFS (CRASH PREVENTION: ALWAYS RENDERED)
-  // ---------------------------------------------------------------------------
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress: heroScrollProgress } = useScroll({
     target: heroRef,
@@ -91,36 +82,20 @@ export default function HomePage() {
   const heroY = useTransform(heroScrollProgress, [0, 1], ["0%", "20%"]);
   const heroOpacity = useTransform(heroScrollProgress, [0, 0.5], [1, 0]);
 
-  const philosophyRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: philScrollProgress } = useScroll({
-    target: philosophyRef,
-    offset: ["start end", "end start"]
-  });
-  const philY = useTransform(philScrollProgress, [0, 1], ["10%", "-10%"]);
-
   return (
     <div className="min-h-screen bg-background overflow-clip selection:bg-primary/20 selection:text-secondary-foreground">
-      <style>{`
-        .text-balance { text-wrap: balance; }
-        .clip-soft-shape { clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); }
-        .clip-organic-blob { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-      `}</style>
       <Header />
-      {/* ---------------------------------------------------------------------------
-          HERO SECTION: The Nurturing Sanctuary
-          --------------------------------------------------------------------------- */}
+      
+      {/* HERO SECTION */}
       <section 
         ref={heroRef} 
         className="relative w-full min-h-[95vh] flex items-center pt-20 overflow-hidden"
       >
-        {/* Background Atmosphere */}
         <div className="absolute inset-0 bg-gradient-to-b from-muted-peach/50 to-background z-0" />
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-secondary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-primary/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
 
         <div className="w-full max-w-[120rem] mx-auto px-5 md:px-12 lg:px-20 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          
-          {/* Text Content */}
           <motion.div 
             className="lg:col-span-6 flex flex-col justify-center"
             initial={{ opacity: 0, x: -30 }}
@@ -132,21 +107,21 @@ export default function HomePage() {
               <span className="text-sm font-medium text-secondary-foreground tracking-wide uppercase">Supporting Confident Motherhood & Healthy Babies</span>
             </div>
             
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-secondary-foreground mb-8 leading-[1.1] text-balance">
-              Breastfeeding & <span className="text-primary italic">Nutrition</span> Support for Every Mother
+            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-secondary-foreground mb-8 leading-[1.1]">
+              Confident Motherhood & <span className="text-primary italic">Healthy</span> Babies
             </h1>
             
-            <p className="font-paragraph text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl text-balance">
-              I'm a Certified Lactation Counselor (CLC) and maternal nutritionist with 3+ years of experience supporting over 500 families. I provide evidence-based guidance on breastfeeding, postpartum nutrition, and infant feeding—available through virtual consultations and an online support community.
+            <p className="font-paragraph text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed max-w-xl">
+              Evidence-based lactation and maternal nutrition support to help you feel confident, supported, and nourished through every stage of your motherhood journey.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link to="/#book">
+              <Link to="/contact">
                 <Button className="h-14 px-10 rounded-full bg-primary hover:bg-primary/90 text-white text-lg font-medium shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:shadow-xl">
                   Book a Consultation
                 </Button>
               </Link>
-              <Link to="/#community">
+              <Link to="/contact">
                 <Button variant="outline" className="h-14 px-10 rounded-full border-2 border-secondary text-secondary-foreground hover:bg-secondary/20 text-lg font-medium transition-all hover:scale-105 bg-transparent">
                   Join the Support Community
                 </Button>
@@ -156,16 +131,13 @@ export default function HomePage() {
             <div className="mt-12 flex items-center gap-4 text-sm text-foreground/60 font-medium">
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-secondary/30 overflow-hidden">
-
-                  </div>
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-secondary/30 overflow-hidden" />
                 ))}
               </div>
               <p>Trusted by 500+ families globally</p>
             </div>
           </motion.div>
 
-          {/* Hero Image Parallax */}
           <motion.div 
             className="lg:col-span-6 relative h-[60vh] lg:h-[80vh] w-full"
             style={{ y: heroY, opacity: heroOpacity }}
@@ -179,7 +151,6 @@ export default function HomePage() {
                 className="w-full h-full object-cover scale-105"
               />
               
-              {/* Floating Badge */}
               <motion.div 
                 className="absolute bottom-10 left-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl max-w-xs border border-white/50"
                 initial={{ y: 20, opacity: 0 }}
@@ -200,71 +171,60 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-      {/* ---------------------------------------------------------------------------
-          PHILOSOPHY SECTION: The Bridge
-          --------------------------------------------------------------------------- */}
-      <section ref={philosophyRef} className="w-full py-32 bg-white relative overflow-hidden">
-        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <motion.div 
-              className="relative order-2 lg:order-1"
-              style={{ y: philY }}
-            >
-              <div className="aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 relative">
-                <div className="absolute inset-0 bg-muted-peach rounded-t-full rounded-b-[10rem] translate-x-4 translate-y-4" />
-                <div className="absolute inset-0 rounded-t-full rounded-b-[10rem] overflow-hidden border-4 border-white shadow-xl">
-                  <Image
-                    src="https://static.wixstatic.com/media/7adb49_b02727304ba248bcb9ecf0ea05c94ca1~mv2.png?originWidth=640&originHeight=768"
-                    alt="Consultant working with a mother"
-                    width={800}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </motion.div>
 
-            <div className="order-1 lg:order-2">
+      {/* WHY FAMILIES TRUST LACTONOURISH */}
+      <section className="w-full py-32 bg-white relative overflow-hidden">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-heading text-4xl md:text-6xl text-secondary-foreground mb-8">
+              Why Families Trust <span className="text-primary">LactoNourish</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+            {[
+              { value: "3+", label: "Years Supporting Mothers" },
+              { value: "500+", label: "Families Guided" },
+              { value: "CLC", label: "Certified Lactation Counselor" },
+              { value: "RD", label: "Maternal Nutritionist" },
+              { value: "∞", label: "Gentle, Non-Judgmental Care" }
+            ].map((stat, idx) => (
               <motion.div
+                key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="text-center"
               >
-                <h2 className="font-heading text-4xl md:text-6xl text-secondary-foreground mb-8">
-                  Supporting Mothers, <span className="text-primary">Nourishing</span> Families
-                </h2>
-                <div className="space-y-6 text-lg md:text-xl text-foreground/80 font-paragraph leading-relaxed">
-                  <p>
-                    I believe that when a mother is supported with evidence-based care and compassion, the whole family thrives. With 3+ years of experience supporting over 500 families, I provide personalized guidance tailored to your unique journey.
-                  </p>
-                  <p>
-                    Whether you're navigating breastfeeding challenges, seeking postpartum nutrition support, or introducing solids, I create a judgment-free space where your concerns are heard, your intuition is honored, and your confidence is built on solid, evidence-based care.
-                  </p>
-                </div>
-                <div className="mt-10 pt-10 border-t border-secondary/30">
-                  <div className="grid grid-cols-3 gap-8">
-                    {[
-                      { label: "Years Experience", value: "3+" },
-                      { label: "Families Supported", value: "500+" },
-                      { label: "Global Reach", value: "Worldwide" }
-                    ].map((stat, idx) => (
-                      <div key={idx}>
-                        <div className="font-heading text-3xl md:text-4xl text-primary font-bold mb-1">{stat.value}</div>
-                        <div className="text-sm text-foreground/60 uppercase tracking-wider">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <div className="font-heading text-3xl md:text-4xl text-primary font-bold mb-2">{stat.value}</div>
+                <div className="text-sm md:text-base text-foreground/70 font-paragraph">{stat.label}</div>
               </motion.div>
-            </div>
+            ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="pt-16 border-t border-secondary/30 text-center max-w-3xl mx-auto"
+          >
+            <p className="font-paragraph text-lg md:text-xl text-foreground/80 leading-relaxed">
+              I believe every mother deserves care, reassurance, and evidence-based guidance without pressure or judgment. My role is to walk alongside you, helping you feel confident in feeding and caring for your baby in a way that feels right for your family.
+            </p>
+          </motion.div>
         </div>
       </section>
-      {/* ---------------------------------------------------------------------------
-          SERVICES SECTION: Dynamic Cards
-          --------------------------------------------------------------------------- */}
+
+      {/* SERVICES SECTION */}
       <section className="w-full py-32 bg-muted-peach relative">
-        {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent" />
         
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20 relative z-10">
@@ -332,9 +292,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* ---------------------------------------------------------------------------
-          JOURNEY SECTION: Process Steps (New Narrative)
-          --------------------------------------------------------------------------- */}
+
+      {/* JOURNEY SECTION */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -343,7 +302,6 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 relative">
-            {/* Connecting Line */}
             <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent" />
 
             {[
@@ -369,9 +327,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* ---------------------------------------------------------------------------
-          TESTIMONIALS SECTION: Social Proof
-          --------------------------------------------------------------------------- */}
+
+      {/* TESTIMONIALS SECTION */}
       <section className="w-full py-32 bg-secondary/10 overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div 
@@ -390,10 +347,9 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {isLoadingTestimonials ? (
-               // Loading State Skeleton
-               ([1, 2, 3].map((i) => (
-                 <div key={i} className="h-80 bg-white/50 rounded-[2rem] animate-pulse" />
-               )))
+              [1, 2, 3].map((i) => (
+                <div key={i} className="h-80 bg-white/50 rounded-[2rem] animate-pulse" />
+              ))
             ) : testimonials.length > 0 ? (
               testimonials.map((testimonial, index) => (
                 <motion.div
@@ -455,9 +411,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* ---------------------------------------------------------------------------
-          FAQ SECTION: Accordion Style
-          --------------------------------------------------------------------------- */}
+
+      {/* FAQ SECTION */}
       <section className="w-full py-32 bg-white">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <div className="grid lg:grid-cols-12 gap-16">
@@ -509,19 +464,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* ---------------------------------------------------------------------------
-          CTA SECTION: Final Call
-          --------------------------------------------------------------------------- */}
+
+      {/* CTA SECTION */}
       <section className="w-full py-24 md:py-32 px-5 md:px-12 lg:px-20">
         <div className="max-w-[100rem] mx-auto">
           <div className="relative rounded-[3rem] overflow-hidden bg-secondary text-secondary-foreground">
-            {/* Background Image Overlay */}
             <div className="absolute inset-0 opacity-10 mix-blend-multiply">
-               <Image 
-                 src="https://static.wixstatic.com/media/7adb49_8c723510c057470cb1906aa0c15dfd78~mv2.png?originWidth=1152&originHeight=768" 
-                 alt="Texture" 
-                 className="w-full h-full object-cover"
-               />
+              <Image 
+                src="https://static.wixstatic.com/media/7adb49_8c723510c057470cb1906aa0c15dfd78~mv2.png?originWidth=1152&originHeight=768" 
+                alt="Texture" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             <div className="relative z-10 px-8 py-20 md:py-32 text-center max-w-4xl mx-auto">
@@ -553,6 +506,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

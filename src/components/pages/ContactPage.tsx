@@ -55,7 +55,7 @@ export default function ContactPage() {
             Let's Connect
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-            I'm here to support you with questions about breastfeeding, postpartum nutrition, or infant feeding. Reach out anytime—I'd love to hear from you.
+            I'm here to support you with questions about breastfeeding, postpartum nutrition, or infant feeding. Reach out anytime—I'd love to hear from you. I typically respond within 24-48 hours.
           </p>
         </motion.div>
       </section>

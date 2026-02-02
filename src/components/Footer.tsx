@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
@@ -24,40 +24,20 @@ export default function Footer() {
           {/* Brand Section */}
           <div>
             <h3 className="font-heading text-2xl text-primary font-bold mb-4">
-              Nurture & Nourish
+              LactoNourish
             </h3>
-            <p className="font-paragraph text-base text-foreground leading-relaxed mb-6">
-              Evidence-based lactation and nutrition support for families worldwide.
+            <p className="font-paragraph text-base text-foreground leading-relaxed mb-2">
+              Lactation & Maternal Nutrition Support
             </p>
-            <div className="flex gap-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
+            <p className="font-paragraph text-sm text-foreground/70 mb-6">
+              Virtual Care — India | USA | Worldwide
+            </p>
+            <a
+              href="mailto:lactoloves@gmail.com"
+              className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
+            >
+              lactoloves@gmail.com
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -147,7 +127,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-secondary/50 text-center">
           <p className="font-paragraph text-sm text-foreground/70">
-            © {new Date().getFullYear()} Nurture & Nourish. All rights reserved.
+            © {new Date().getFullYear()} LactoNourish. All rights reserved.
           </p>
         </div>
       </div>
