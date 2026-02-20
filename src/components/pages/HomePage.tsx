@@ -99,7 +99,7 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <section 
         ref={heroRef} 
-        className="relative w-full min-h-[100vh] flex items-center pt-24 pb-12 overflow-hidden"
+        className="relative w-full min-h-[85vh] flex items-center pt-20 pb-12 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-cream/50 to-soft-cream z-0" />
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-dusty-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
@@ -117,11 +117,11 @@ export default function HomePage() {
               <span className="text-sm font-bold text-deep-blue tracking-wide uppercase">Maternal & Infant Health Support</span>
             </div>
             
-            <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl text-deep-blue mb-10 leading-[1.05] font-bold">
+            <h1 className="font-heading text-6xl md:text-8xl lg:text-8xl text-deep-blue mb-10 leading-[1.05] font-bold">
               Confident Motherhood Starts With <span className="text-accent-gold italic">Gentle Support</span>
             </h1>
             
-            <p className="font-paragraph text-lg md:text-2xl text-dusty-blue mb-12 leading-relaxed max-w-2xl font-medium">
+            <p className="font-paragraph text-lg md:text-2xl text-dusty-blue mb-12 leading-relaxed max-w-2xl font-semibold">
               Lactation guidance, postpartum nutrition, and infant feeding support rooted in care and evidence.
             </p>
             
@@ -155,7 +155,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-dusty-blue/10 rounded-[3rem] rotate-3 scale-95 transform origin-bottom-right" />
             <div className="relative h-full w-full rounded-[3rem] overflow-hidden shadow-2xl shadow-dusty-blue/20 border-[8px] border-white">
               <Image
-                src="https://static.wixstatic.com/media/7adb49_0bf652383b494591a572bd76ee26dff7~mv2.png?originWidth=1152&originHeight=768"
+                src="https://static.wixstatic.com/media/7adb49_a4c5c3d4e928487797357c7c5ce30b29~mv2.png?originWidth=1152&originHeight=768"
                 alt="Mother gently holding and nurturing her baby in a calm environment"
                 width={1200}
                 className="w-full h-full object-cover scale-105"
@@ -435,7 +435,7 @@ export default function HomePage() {
               className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl"
             >
               <Image
-                src="https://static.wixstatic.com/media/7adb49_8c723510c057470cb1906aa0c15dfd78~mv2.png?originWidth=1152&originHeight=768"
+                src="https://static.wixstatic.com/media/7adb49_03f446c523fc405f979cc05905505fed~mv2.png?originWidth=1152&originHeight=768"
                 alt="Warm, supportive environment for maternal and infant health"
                 width={600}
                 className="w-full h-full object-cover"

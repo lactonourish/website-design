@@ -61,9 +61,9 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="order-2 md:order-1"
             >
-              <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6 font-bold">About Me</h2>
+              <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-8 font-bold">About Me</h2>
               <div className="space-y-6 font-paragraph text-base md:text-lg text-dusty-blue leading-relaxed">
-                <p className="font-medium">Hi, I'm Ananyaa.</p>
+                <p className="font-semibold">Hi, I'm Ananyaa.</p>
                 <p>I'm a Certified Lactation Counselor (CLC) and Nutritionist specializing in maternal and child health, and the heart behind LactoNourish.</p>
                 <p>My journey into this field began with a deep desire to make motherhood feel less overwhelming and more supported. Over the past three years, I've had the privilege of guiding more than 500 families through breastfeeding challenges, postpartum recovery, and early infant feeding milestones.</p>
                 <p>I created LactoNourish as a space where science meets compassion — where mothers and babies are supported as a dyad, and where education empowers families to make confident, informed decisions.</p>
@@ -81,7 +81,7 @@ export default function AboutPage() {
             >
               <div className="rounded-3xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://static.wixstatic.com/media/7adb49_2a8b72f8c5a346a2b7039a0985342fb9~mv2.jpg"
+                  src="https://static.wixstatic.com/media/7adb49_e30e675b3dd14de097c339d836aaf4b7~mv2.png"
                   width={600}
                   className="w-full h-auto"
                   alt="LactoNourish - Supporting maternal and infant health"

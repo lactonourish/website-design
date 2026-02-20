@@ -45,7 +45,7 @@ export default function BlogPostDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-soft-cream">
       <Header />
       
       <div className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24 min-h-[600px]">

@@ -51,17 +51,17 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="font-heading text-5xl md:text-6xl text-foreground mb-6">
+          <h1 className="font-heading text-5xl md:text-6xl text-deep-blue mb-6">
             Let's Connect
           </h1>
-          <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-            Have questions about breastfeeding, postpartum nutrition, or infant feeding? I'd love to hear from you. I typically respond within 24-48 hours.
+          <p className="font-paragraph text-lg md:text-xl text-dusty-blue max-w-3xl mx-auto">
+            Have questions about breastfeeding, postpartum nutrition, or infant feeding? Reach out and I'll respond within 24–48 hours.
           </p>
         </motion.div>
       </section>
 
       {/* Contact Section */}
-      <section className="w-full py-16 md:py-24">
+      <section className="w-full py-16 md:py-24 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info Cards */}
@@ -71,43 +71,43 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
-              <Card className="bg-muted-peach border-none shadow-md rounded-3xl">
+              <Card className="bg-white border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-secondary rounded-full flex items-center justify-center mb-4">
-                    <Mail className="w-7 h-7 text-primary" />
+                  <div className="w-14 h-14 bg-cream rounded-full flex items-center justify-center mb-4">
+                    <Mail className="w-7 h-7 text-accent-gold" />
                   </div>
-                  <h3 className="font-heading text-xl text-foreground mb-2">
+                  <h3 className="font-heading text-xl text-deep-blue mb-2">
                     Email
                   </h3>
                   <a
                     href="mailto:lactoloves@gmail.com"
-                    className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
+                    className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors"
                   >
                     lactoloves@gmail.com
                   </a>
                 </CardContent>
               </Card>
 
-              <Card className="bg-muted-peach border-none shadow-md rounded-3xl">
+              <Card className="bg-white border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-secondary rounded-full flex items-center justify-center mb-4">
-                    <MapPin className="w-7 h-7 text-primary" />
+                  <div className="w-14 h-14 bg-cream rounded-full flex items-center justify-center mb-4">
+                    <MapPin className="w-7 h-7 text-accent-gold" />
                   </div>
-                  <h3 className="font-heading text-xl text-foreground mb-2">
+                  <h3 className="font-heading text-xl text-deep-blue mb-2">
                     Availability
                   </h3>
-                  <p className="font-paragraph text-base text-foreground">
+                  <p className="font-paragraph text-base text-dusty-blue">
                     Virtual Support Available Worldwide
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-muted-peach border-none shadow-md rounded-3xl">
+              <Card className="bg-white border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
-                  <h3 className="font-heading text-xl text-foreground mb-3">
+                  <h3 className="font-heading text-xl text-deep-blue mb-3">
                     Join Our Community
                   </h3>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  <p className="font-paragraph text-base text-dusty-blue leading-relaxed">
                     Connect with other mothers in our virtual support group. Share experiences, ask questions, and find community.
                   </p>
                 </CardContent>
@@ -121,19 +121,19 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:col-span-2"
             >
-              <Card className="bg-muted-peach border-none shadow-lg rounded-3xl">
+              <Card className="bg-white border-none shadow-lg rounded-3xl">
                 <CardContent className="p-8 md:p-12">
-                  <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">
+                  <h2 className="font-heading text-3xl md:text-4xl text-deep-blue mb-6">
                     Send a Message
                   </h2>
-                  <p className="font-paragraph text-base text-foreground mb-8">
-                    Have questions about breastfeeding, postpartum nutrition, or infant feeding? I'd love to help. Fill out the form below and I'll get back to you soon.
+                  <p className="font-paragraph text-base text-dusty-blue mb-8">
+                    Have questions about breastfeeding, postpartum nutrition, or infant feeding? Fill out the form below and I'll get back to you soon.
                   </p>
 
                   {submitted && (
-                    <div className="bg-secondary border border-primary/20 rounded-2xl p-6 mb-8">
-                      <p className="font-paragraph text-base text-foreground text-center">
-                        Thank you for reaching out! I'll respond to your message soon. You don't have to do this alone—I'm here to support you.
+                    <div className="bg-cream border border-accent-gold/20 rounded-2xl p-6 mb-8">
+                      <p className="font-paragraph text-base text-deep-blue text-center">
+                        Thank you for reaching out! I'll respond to your message soon.
                       </p>
                     </div>
                   )}
@@ -141,7 +141,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="font-paragraph text-base text-foreground">
+                        <Label htmlFor="name" className="font-paragraph text-base text-deep-blue font-semibold">
                           Your Name *
                         </Label>
                         <Input
@@ -152,12 +152,12 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="Enter your name"
-                          className="rounded-2xl border-secondary bg-background"
+                          className="rounded-2xl border-dusty-blue/20 bg-soft-cream text-deep-blue"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="font-paragraph text-base text-foreground">
+                        <Label htmlFor="email" className="font-paragraph text-base text-deep-blue font-semibold">
                           Email Address *
                         </Label>
                         <Input
@@ -168,14 +168,14 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="your@email.com"
-                          className="rounded-2xl border-secondary bg-background"
+                          className="rounded-2xl border-dusty-blue/20 bg-soft-cream text-deep-blue"
                         />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="phone" className="font-paragraph text-base text-foreground">
+                        <Label htmlFor="phone" className="font-paragraph text-base text-deep-blue font-semibold">
                           Phone Number
                         </Label>
                         <Input
@@ -185,12 +185,12 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="+91 98765 43210"
-                          className="rounded-2xl border-secondary bg-background"
+                          className="rounded-2xl border-dusty-blue/20 bg-soft-cream text-deep-blue"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="subject" className="font-paragraph text-base text-foreground">
+                        <Label htmlFor="subject" className="font-paragraph text-base text-deep-blue font-semibold">
                           Subject *
                         </Label>
                         <Input
@@ -201,13 +201,13 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="What can I help with?"
-                          className="rounded-2xl border-secondary bg-background"
+                          className="rounded-2xl border-dusty-blue/20 bg-soft-cream text-deep-blue"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="font-paragraph text-base text-foreground">
+                      <Label htmlFor="message" className="font-paragraph text-base text-deep-blue font-semibold">
                         Message *
                       </Label>
                       <Textarea
@@ -218,13 +218,13 @@ export default function ContactPage() {
                         required
                         placeholder="Tell me about your situation and how I can support you..."
                         rows={6}
-                        className="rounded-2xl border-secondary bg-background resize-none"
+                        className="rounded-2xl border-dusty-blue/20 bg-soft-cream text-deep-blue resize-none"
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 font-semibold text-base w-full md:w-auto"
+                      className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-6 font-bold text-base w-full md:w-auto"
                     >
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
@@ -238,7 +238,7 @@ export default function ContactPage() {
       </section>
 
       {/* Warm Closing Section */}
-      <section className="w-full bg-secondary py-16 md:py-24">
+      <section className="w-full bg-cream py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,14 +247,14 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6">
               You Don't Have to Do This Alone
             </h2>
-            <p className="font-paragraph text-lg md:text-xl text-foreground leading-relaxed mb-8">
+            <p className="font-paragraph text-lg md:text-xl text-dusty-blue leading-relaxed mb-8">
               Motherhood can feel overwhelming, but you have support. Whether you're struggling with breastfeeding, navigating postpartum recovery, or wondering about your baby's feeding, I'm here for you.
             </p>
-            <p className="font-paragraph text-lg text-foreground leading-relaxed">
-              Reach out with your questions, concerns, or just to chat. I'm here to support you every step of the way.
+            <p className="font-paragraph text-lg text-dusty-blue leading-relaxed">
+              Reach out with your questions or concerns. I'm here to support you every step of the way.
             </p>
           </motion.div>
         </div>

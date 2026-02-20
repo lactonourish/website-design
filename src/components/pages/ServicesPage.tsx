@@ -106,11 +106,11 @@ export default function ServicesPage() {
           <h1 className="font-heading text-5xl md:text-6xl text-deep-blue mb-6">
             Services & Support
           </h1>
-          <p className="font-paragraph text-lg md:text-xl text-dusty-blue max-w-3xl mx-auto mb-8">
+          <p className="font-paragraph text-lg md:text-xl text-dusty-blue max-w-3xl mx-auto mb-8 font-semibold">
             Comprehensive lactation and nutrition support tailored to your family's unique journey
           </p>
           <Link to="/contact">
-            <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-6 font-semibold text-base">
+            <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-6 font-bold text-base">
               Book Your Consultation
             </Button>
           </Link>
@@ -174,7 +174,7 @@ export default function ServicesPage() {
                   </div>
                   
                   <Link to="/contact">
-                    <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-3 font-semibold">
+                    <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-3 font-bold">
                       Book Your Consultation
                     </Button>
                   </Link>

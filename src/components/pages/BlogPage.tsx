@@ -72,7 +72,7 @@ export default function BlogPage() {
   const featuredPost = posts.length > 0 ? posts[0] : null;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-soft-cream">
       <Header />
       
       {/* Hero Section */}
@@ -83,10 +83,10 @@ export default function BlogPage() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="font-heading text-5xl md:text-6xl text-foreground mb-6">
+          <h1 className="font-heading text-5xl md:text-6xl text-deep-blue mb-6">
             LactoNourish Journal
           </h1>
-          <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-8">
+          <p className="font-paragraph text-lg md:text-xl text-dusty-blue max-w-3xl mx-auto mb-8 font-semibold">
             Weekly posts on breastfeeding education, postpartum guidance, simple nourishing recipes, infant feeding support, and book reviews related to motherhood.
           </p>
         </motion.div>
@@ -95,18 +95,18 @@ export default function BlogPage() {
       </section>
 
       {/* Search and Filter */}
-      <section className="w-full bg-muted-peach py-12">
+      <section className="w-full bg-cream py-12">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
             {/* Search Bar */}
             <div className="relative w-full md:w-96">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-foreground/50" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-dusty-blue/50" />
               <Input
                 type="text"
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 rounded-full border-secondary bg-background"
+                className="pl-12 rounded-full border-dusty-blue/20 bg-white text-deep-blue"
               />
             </div>
 
@@ -117,10 +117,10 @@ export default function BlogPage() {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   variant={selectedCategory === category ? 'default' : 'outline'}
-                  className={`rounded-full px-6 py-2 font-semibold text-sm ${
+                  className={`rounded-full px-6 py-2 font-bold text-sm ${
                     selectedCategory === category
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                      : 'border-primary text-primary hover:bg-primary/5'
+                      ? 'bg-accent-gold text-deep-blue hover:bg-accent-gold/90'
+                      : 'border-dusty-blue/20 text-dusty-blue hover:bg-dusty-blue/5'
                   }`}
                 >
                   {category}
@@ -141,11 +141,11 @@ export default function BlogPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-8">
+              <h2 className="font-heading text-3xl md:text-4xl text-deep-blue mb-8">
                 Featured Article
               </h2>
               <Link to={`/blog/${featuredPost._id}`}>
-                <Card className="bg-background border-none shadow-lg rounded-3xl overflow-hidden hover:shadow-xl transition-shadow">
+                <Card className="bg-white border-none shadow-lg rounded-3xl overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="grid md:grid-cols-2 gap-0">
                     {featuredPost.featuredImage && (
                       <div className="aspect-[16/9] md:aspect-auto overflow-hidden">
@@ -159,20 +159,20 @@ export default function BlogPage() {
                     )}
                     <CardContent className="p-8 md:p-12 flex flex-col justify-center">
                       {featuredPost.category && (
-                        <span className="inline-block bg-secondary text-primary px-4 py-1 rounded-full text-sm font-semibold mb-4 w-fit">
+                        <span className="inline-block bg-cream text-accent-gold px-4 py-1 rounded-full text-sm font-bold mb-4 w-fit">
                           {featuredPost.category}
                         </span>
                       )}
-                      <h3 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
+                      <h3 className="font-heading text-3xl md:text-4xl text-deep-blue mb-4">
                         {featuredPost.title}
                       </h3>
                       {featuredPost.content && (
-                        <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 line-clamp-3">
+                        <p className="font-paragraph text-base text-dusty-blue leading-relaxed mb-6 line-clamp-3">
                           {featuredPost.content.substring(0, 200)}...
                         </p>
                       )}
                       {featuredPost.publishDate && (
-                        <div className="flex items-center gap-2 text-foreground/70">
+                        <div className="flex items-center gap-2 text-dusty-blue/70">
                           <Calendar className="w-4 h-4" />
                           <span className="font-paragraph text-sm">
                             {format(new Date(featuredPost.publishDate), 'MMMM d, yyyy')}
@@ -189,7 +189,7 @@ export default function BlogPage() {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="w-full py-16 md:py-24 bg-muted-peach">
+      <section className="w-full py-16 md:py-24 bg-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -198,7 +198,7 @@ export default function BlogPage() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="font-heading text-3xl md:text-4xl text-foreground">
+            <h2 className="font-heading text-3xl md:text-4xl text-deep-blue">
               {selectedCategory === 'All' ? 'All Articles' : `${selectedCategory} Articles`}
             </h2>
           </motion.div>
@@ -214,7 +214,7 @@ export default function BlogPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Link to={`/blog/${post._id}`}>
-                    <Card className="bg-background border-none shadow-md h-full rounded-3xl overflow-hidden hover:shadow-xl transition-shadow">
+                    <Card className="bg-white border-none shadow-md h-full rounded-3xl overflow-hidden hover:shadow-xl transition-shadow">
                       {post.featuredImage && (
                         <div className="aspect-[16/9] overflow-hidden">
                           <Image
@@ -227,20 +227,20 @@ export default function BlogPage() {
                       )}
                       <CardContent className="p-6">
                         {post.category && (
-                          <span className="inline-block bg-secondary text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                          <span className="inline-block bg-cream text-accent-gold px-3 py-1 rounded-full text-xs font-bold mb-3">
                             {post.category}
                           </span>
                         )}
-                        <h3 className="font-heading text-xl text-foreground mb-3 line-clamp-2">
+                        <h3 className="font-heading text-xl text-deep-blue mb-3 line-clamp-2">
                           {post.title}
                         </h3>
                         {post.content && (
-                          <p className="font-paragraph text-sm text-foreground leading-relaxed mb-4 line-clamp-3">
+                          <p className="font-paragraph text-sm text-dusty-blue leading-relaxed mb-4 line-clamp-3">
                             {post.content.substring(0, 150)}...
                           </p>
                         )}
                         {post.publishDate && (
-                          <div className="flex items-center gap-2 text-foreground/70">
+                          <div className="flex items-center gap-2 text-dusty-blue/70">
                             <Calendar className="w-4 h-4" />
                             <span className="font-paragraph text-xs">
                               {format(new Date(post.publishDate), 'MMM d, yyyy')}
@@ -254,7 +254,7 @@ export default function BlogPage() {
               ))
             ) : (
               <div className="col-span-3 text-center py-12">
-                <p className="font-paragraph text-lg text-foreground/70">
+                <p className="font-paragraph text-lg text-dusty-blue/70">
                   No articles found. Try adjusting your search or filters.
                 </p>
               </div>
@@ -264,19 +264,19 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="w-full py-16 md:py-24">
+      <section className="w-full py-16 md:py-24 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-secondary rounded-3xl p-12 md:p-16 text-center"
+            className="bg-cream rounded-3xl p-12 md:p-16 text-center"
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6">
               Stay Updated
             </h2>
-            <p className="font-paragraph text-lg md:text-xl text-foreground mb-8 max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg md:text-xl text-dusty-blue mb-8 max-w-2xl mx-auto">
               Subscribe to receive the latest articles, tips, and resources directly in your inbox.
             </p>
             <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
@@ -286,17 +286,17 @@ export default function BlogPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="rounded-full border-secondary bg-background flex-1"
+                className="rounded-full border-dusty-blue/20 bg-white text-deep-blue flex-1"
               />
               <Button
                 type="submit"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-3 font-semibold"
+                className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-3 font-bold"
               >
                 Subscribe
               </Button>
             </form>
             {subscribed && (
-              <p className="font-paragraph text-base text-primary mt-4">
+              <p className="font-paragraph text-base text-accent-gold mt-4">
                 Thank you for subscribing! Check your email for weekly tips and nourishing recipes.
               </p>
             )}
