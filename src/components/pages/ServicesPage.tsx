@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollArrow from '@/components/ScrollArrow';
 import { motion } from 'framer-motion';
 import { Image } from '@/components/ui/image';
 
@@ -96,32 +97,35 @@ export default function ServicesPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24">
+      <section className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24 relative min-h-[60vh] flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="text-center flex-1 flex flex-col justify-center"
         >
-          <h1 className="font-heading text-5xl md:text-6xl text-deep-blue mb-6">
+          <h1 className="font-heading text-6xl md:text-7xl text-deep-blue mb-6 font-bold">
             Services & Support
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-dusty-blue max-w-3xl mx-auto mb-8 font-semibold">
             Comprehensive lactation and nutrition support tailored to your family's unique journey
           </p>
           <Link to="/contact">
-            <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-6 font-bold text-base">
+            <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-6 font-bold text-base w-fit mx-auto">
               Book Your Consultation
             </Button>
           </Link>
         </motion.div>
+        
+        {/* Scroll Arrow */}
+        <ScrollArrow targetId="service-lactation" />
       </section>
 
       {/* Service Categories */}
       {serviceCategories.map((category, index) => (
         <section
           key={category.id}
-          id={category.id}
+          id={`service-${category.id}`}
           className={`w-full py-16 md:py-24 ${index % 2 === 0 ? 'bg-soft-cream' : 'bg-cream'}`}
         >
           <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -136,7 +140,7 @@ export default function ServicesPage() {
                   <div className="w-16 h-16 bg-cream rounded-full flex items-center justify-center mb-6">
                     <category.icon className="w-8 h-8 text-accent-gold" />
                   </div>
-                  <h2 className="font-heading text-3xl md:text-4xl text-deep-blue mb-4">
+                  <h2 className="font-heading text-3xl md:text-4xl text-deep-blue mb-4 font-bold">
                     {category.title}
                   </h2>
                   <p className="font-paragraph text-lg text-dusty-blue mb-6 font-semibold">
@@ -145,21 +149,21 @@ export default function ServicesPage() {
                   
                   <div className="space-y-6 mb-8">
                     <div>
-                      <h3 className="font-heading text-lg text-deep-blue mb-2">What It Is</h3>
+                      <h3 className="font-heading text-lg text-deep-blue mb-2 font-bold">What It Is</h3>
                       <p className="font-paragraph text-base text-dusty-blue/80 leading-relaxed">
                         {category.whatItIs}
                       </p>
                     </div>
                     
                     <div>
-                      <h3 className="font-heading text-lg text-deep-blue mb-2">How It Helps</h3>
+                      <h3 className="font-heading text-lg text-deep-blue mb-2 font-bold">How It Helps</h3>
                       <p className="font-paragraph text-base text-dusty-blue/80 leading-relaxed">
                         {category.howItHelps}
                       </p>
                     </div>
 
                     <div>
-                      <h3 className="font-heading text-lg text-deep-blue mb-3">Includes:</h3>
+                      <h3 className="font-heading text-lg text-deep-blue mb-3 font-bold">Includes:</h3>
                       <ul className="space-y-2">
                         {category.details.map((detail, idx) => (
                           <li key={idx} className="flex items-start gap-3">
@@ -203,7 +207,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-white mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 font-bold">
               Ready to Get Started?
             </h2>
             <p className="font-paragraph text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">

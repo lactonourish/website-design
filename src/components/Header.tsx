@@ -20,15 +20,15 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-deep-blue/95 backdrop-blur-sm border-b border-dusty-blue/20 shadow-md">
-      <div className="max-w-[100rem] mx-auto px-5 md:px-20 py-5">
+      <div className="max-w-[100rem] mx-auto px-5 md:px-20 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
               <Image
                 src="https://static.wixstatic.com/media/7adb49_8e2091822d4646cd94205d530668c827~mv2.png"
                 alt="LactoNourish logo"
-                width={56}
+                width={64}
                 className="w-full h-full object-cover"
               />
             </div>

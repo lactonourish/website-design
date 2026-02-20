@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollArrow from '@/components/ScrollArrow';
 import { BaseCrudService } from '@/integrations';
 import { FrequentlyAskedQuestions, BlogPosts } from '@/entities';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -99,13 +100,13 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <section 
         ref={heroRef} 
-        className="relative w-full min-h-[85vh] flex items-center pt-20 pb-12 overflow-hidden"
+        className="relative w-full min-h-[85vh] flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-cream/50 to-soft-cream z-0" />
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-dusty-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-accent-gold/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
 
-        <div className="w-full max-w-[120rem] mx-auto px-5 md:px-12 lg:px-20 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="w-full max-w-[120rem] mx-auto px-5 md:px-12 lg:px-20 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center flex-1">
           <motion.div 
             className="lg:col-span-6 flex flex-col justify-center"
             initial={{ opacity: 0, x: -30 }}
@@ -117,11 +118,11 @@ export default function HomePage() {
               <span className="text-sm font-bold text-deep-blue tracking-wide uppercase">Maternal & Infant Health Support</span>
             </div>
             
-            <h1 className="font-heading text-6xl md:text-8xl lg:text-8xl text-deep-blue mb-10 leading-[1.05] font-bold">
+            <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl text-deep-blue mb-10 leading-[1.05] font-bold">
               Confident Motherhood Starts With <span className="text-accent-gold italic">Gentle Support</span>
             </h1>
             
-            <p className="font-paragraph text-lg md:text-2xl text-dusty-blue mb-12 leading-relaxed max-w-2xl font-semibold">
+            <p className="font-paragraph text-xl md:text-2xl text-dusty-blue mb-12 leading-relaxed max-w-2xl font-semibold">
               Lactation guidance, postpartum nutrition, and infant feeding support rooted in care and evidence.
             </p>
             
@@ -180,10 +181,15 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
+
+        {/* Scroll Arrow */}
+        <div className="relative z-10 pb-8">
+          <ScrollArrow targetId="who-support" />
+        </div>
       </section>
 
       {/* WHO I SUPPORT SECTION */}
-      <section className="w-full py-32 bg-cream relative overflow-hidden">
+      <section id="who-support" className="w-full py-32 bg-cream relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,7 +198,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-6xl text-deep-blue mb-8">
+            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
               Who I Support
             </h2>
             <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 max-w-2xl mx-auto">
@@ -202,10 +208,26 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "New Mothers", description: "Navigating breastfeeding with confidence and support" },
-              { title: "Expecting Parents", description: "Preparing for a smooth breastfeeding start" },
-              { title: "Families Facing Challenges", description: "Overcoming feeding difficulties with expert guidance" },
-              { title: "Parents Starting Solids", description: "Introducing complementary feeding with ease" }
+              { 
+                title: "New Mothers", 
+                description: "Navigating breastfeeding with confidence and support",
+                image: "https://static.wixstatic.com/media/7adb49_093d2b0649f74b1182e7b181b2c1517b~mv2.png"
+              },
+              { 
+                title: "Expecting Parents", 
+                description: "Preparing for a smooth breastfeeding start",
+                image: "https://static.wixstatic.com/media/7adb49_5cbf2d4efd8a4058a9e9cebaab81f810~mv2.png"
+              },
+              { 
+                title: "Families Facing Challenges", 
+                description: "Overcoming feeding difficulties with expert guidance",
+                image: "https://static.wixstatic.com/media/7adb49_ba14d97899074d59b0e007449d1890fe~mv2.png"
+              },
+              { 
+                title: "Parents Starting Solids", 
+                description: "Introducing complementary feeding with ease",
+                image: "https://static.wixstatic.com/media/7adb49_1974d1cb72704e7b9624c88015c5cf1d~mv2.png"
+              }
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -214,9 +236,17 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
-                <Card className="bg-white border-none shadow-md rounded-[2rem] h-full hover:shadow-lg transition-shadow">
+                <Card className="bg-white border-none shadow-md rounded-[2rem] h-full hover:shadow-lg transition-shadow overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <CardContent className="p-8 text-center">
-                    <h3 className="font-heading text-xl text-deep-blue mb-3">{item.title}</h3>
+                    <h3 className="font-heading text-xl text-deep-blue mb-3 font-bold">{item.title}</h3>
                     <p className="font-paragraph text-base text-dusty-blue/70">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -227,7 +257,7 @@ export default function HomePage() {
       </section>
 
       {/* HOW SUPPORT WORKS SECTION */}
-      <section className="w-full py-32 bg-white relative overflow-hidden">
+      <section id="how-works" className="w-full py-32 bg-white relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -236,7 +266,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-6xl text-deep-blue mb-8">
+            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
               How Support Works
             </h2>
             <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 max-w-2xl mx-auto">
@@ -262,7 +292,7 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-accent-gold text-deep-blue rounded-full flex items-center justify-center mb-6 font-heading text-2xl font-bold">
                     {item.step}
                   </div>
-                  <h3 className="font-heading text-2xl text-deep-blue mb-4">{item.title}</h3>
+                  <h3 className="font-heading text-2xl text-deep-blue mb-4 font-bold">{item.title}</h3>
                   <p className="font-paragraph text-base text-dusty-blue/70">{item.description}</p>
                 </div>
                 {idx < 2 && (
@@ -275,7 +305,7 @@ export default function HomePage() {
       </section>
 
       {/* WHY CHOOSE LACTONOURISH */}
-      <section className="w-full py-32 bg-cream relative overflow-hidden">
+      <section id="why-choose" className="w-full py-32 bg-cream relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -284,7 +314,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-6xl text-deep-blue mb-8">
+            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
               Why Choose <span className="text-accent-gold">LactoNourish</span>
             </h2>
           </motion.div>
@@ -406,7 +436,7 @@ export default function HomePage() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="w-full py-32 bg-soft-cream">
+      <section id="about" className="w-full py-32 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -416,7 +446,7 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-accent-gold font-semibold tracking-wider uppercase text-sm mb-4 block">About LactoNourish</span>
-              <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-8 leading-tight">
+              <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-8 leading-tight font-bold">
                 Supporting Mother-Baby Dyads With Care & Evidence
               </h2>
               <p className="font-paragraph text-lg text-dusty-blue/80 leading-relaxed mb-6">
@@ -446,7 +476,7 @@ export default function HomePage() {
       </section>
 
       {/* BLOG PREVIEW SECTION */}
-      <section className="w-full py-32 bg-white">
+      <section id="blog" className="w-full py-32 bg-white">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -454,7 +484,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-6xl text-deep-blue mb-6">
+            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-6 font-bold">
               From the <span className="text-accent-gold">LactoNourish Journal</span>
             </h2>
             <p className="font-paragraph text-xl text-dusty-blue/70 max-w-2xl mx-auto">
@@ -494,7 +524,7 @@ export default function HomePage() {
                             {post.category}
                           </span>
                         )}
-                        <h3 className="font-heading text-2xl text-deep-blue mb-4 group-hover:text-accent-gold transition-colors line-clamp-2">
+                        <h3 className="font-heading text-2xl text-deep-blue mb-4 group-hover:text-accent-gold transition-colors line-clamp-2 font-bold">
                           {post.title}
                         </h3>
                         <p className="font-paragraph text-dusty-blue/70 leading-relaxed line-clamp-3 mb-6">
@@ -533,12 +563,12 @@ export default function HomePage() {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="w-full py-32 bg-cream">
+      <section id="faq" className="w-full py-32 bg-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <div className="grid lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
               <div className="sticky top-32">
-                <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6">
+                <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6 font-bold">
                   Common Questions
                 </h2>
                 <p className="text-lg text-dusty-blue/70 mb-8">
@@ -565,7 +595,7 @@ export default function HomePage() {
                     transition={{ delay: index * 0.05 }}
                   >
                     <div className="group bg-white hover:bg-white/80 border border-dusty-blue/10 rounded-3xl p-8 transition-colors duration-300">
-                      <h3 className="font-heading text-xl text-deep-blue mb-3 flex items-start gap-3">
+                      <h3 className="font-heading text-xl text-deep-blue mb-3 flex items-start gap-3 font-bold">
                         <span className="text-accent-gold mt-1"><CheckCircle className="w-5 h-5" /></span>
                         {faq.question}
                       </h3>

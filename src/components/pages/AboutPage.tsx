@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollArrow from '@/components/ScrollArrow';
 import { motion } from 'framer-motion';
 
 export default function AboutPage() {
@@ -34,24 +35,27 @@ export default function AboutPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24">
+      <section className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24 relative min-h-[60vh] flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 flex-1 flex flex-col justify-center"
         >
-          <h1 className="font-heading text-5xl md:text-6xl text-deep-blue mb-6">
+          <h1 className="font-heading text-6xl md:text-7xl text-deep-blue mb-6 font-bold">
             About LactoNourish
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-dusty-blue max-w-3xl mx-auto">
             Supporting mothers and babies with warmth, evidence, and practical wisdom
           </p>
         </motion.div>
+        
+        {/* Scroll Arrow */}
+        <ScrollArrow targetId="about-intro" />
       </section>
 
       {/* Introduction Section */}
-      <section className="w-full bg-cream py-16 md:py-24">
+      <section id="about-intro" className="w-full bg-cream py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div
@@ -92,7 +96,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Credentials Section */}
+       {/* Credentials Section */}
       <section className="w-full py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
@@ -102,7 +106,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-4">
+            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-4 font-bold">
               Our Credentials & Commitment
             </h2>
             <p className="font-paragraph text-lg text-dusty-blue max-w-3xl mx-auto">
@@ -124,7 +128,7 @@ export default function AboutPage() {
                     <div className="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto mb-6">
                       <credential.icon className="w-8 h-8 text-accent-gold" />
                     </div>
-                    <h3 className="font-heading text-xl text-deep-blue mb-3">
+                    <h3 className="font-heading text-xl text-deep-blue mb-3 font-bold">
                       {credential.title}
                     </h3>
                     <p className="font-paragraph text-base text-dusty-blue/80 leading-relaxed">
@@ -148,14 +152,14 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-8 text-center">
+            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-8 text-center font-bold">
               Our Core Values
             </h2>
             
             <div className="space-y-8">
               <Card className="bg-white border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
-                  <h3 className="font-heading text-2xl text-deep-blue mb-4">
+                  <h3 className="font-heading text-2xl text-deep-blue mb-4 font-bold">
                     Non-Judgmental Care
                   </h3>
                   <p className="font-paragraph text-base text-dusty-blue/80 leading-relaxed">
@@ -211,7 +215,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6 font-bold">
               Building Community
             </h2>
             <p className="font-paragraph text-lg text-dusty-blue max-w-3xl mx-auto mb-8">
@@ -221,7 +225,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               <Card className="bg-cream border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
-                  <h3 className="font-heading text-2xl text-deep-blue mb-4">
+                  <h3 className="font-heading text-2xl text-deep-blue mb-4 font-bold">
                     Virtual Support Group
                   </h3>
                   <p className="font-paragraph text-base text-dusty-blue/80 leading-relaxed">
@@ -232,7 +236,7 @@ export default function AboutPage() {
 
               <Card className="bg-cream border-none shadow-md rounded-3xl">
                 <CardContent className="p-8">
-                  <h3 className="font-heading text-2xl text-deep-blue mb-4">
+                  <h3 className="font-heading text-2xl text-deep-blue mb-4 font-bold">
                     Educational Resources
                   </h3>
                   <p className="font-paragraph text-base text-dusty-blue/80 leading-relaxed">
