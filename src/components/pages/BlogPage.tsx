@@ -84,10 +84,10 @@ export default function BlogPage() {
           className="text-center"
         >
           <h1 className="font-heading text-5xl md:text-6xl text-foreground mb-6">
-            Blog & Resources
+            LactoNourish Journal
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-8">
-            This blog shares weekly guidance, practical tips, and nourishing recipes for mothers and babies. From breastfeeding challenges to postpartum recovery, infant feeding to maternal nutrition—I'm here to support you with evidence-based advice and gentle wisdom.
+            Weekly posts on breastfeeding education, postpartum guidance, simple nourishing recipes, infant feeding support, and book reviews related to motherhood.
           </p>
         </motion.div>
 

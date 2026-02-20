@@ -24,8 +24,13 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center">
-              <span className="font-heading text-lg text-accent-gold font-bold">L</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
+              <Image
+                src="https://static.wixstatic.com/media/7adb49_8e2091822d4646cd94205d530668c827~mv2.png"
+                alt="LactoNourish logo"
+                width={48}
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="font-heading text-xl md:text-2xl text-deep-blue font-bold">LactoNourish</span>
           </Link>

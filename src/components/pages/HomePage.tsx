@@ -182,8 +182,100 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE LACTONOURISH */}
+      {/* WHO I SUPPORT SECTION */}
+      <section className="w-full py-32 bg-cream relative overflow-hidden">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-heading text-4xl md:text-6xl text-deep-blue mb-8">
+              Who I Support
+            </h2>
+            <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 max-w-2xl mx-auto">
+              LactoNourish is here for families at every stage of their feeding journey
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: "New Mothers", description: "Navigating breastfeeding with confidence and support" },
+              { title: "Expecting Parents", description: "Preparing for a smooth breastfeeding start" },
+              { title: "Families Facing Challenges", description: "Overcoming feeding difficulties with expert guidance" },
+              { title: "Parents Starting Solids", description: "Introducing complementary feeding with ease" }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <Card className="bg-white border-none shadow-md rounded-[2rem] h-full hover:shadow-lg transition-shadow">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="font-heading text-xl text-deep-blue mb-3">{item.title}</h3>
+                    <p className="font-paragraph text-base text-dusty-blue/70">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW SUPPORT WORKS SECTION */}
       <section className="w-full py-32 bg-white relative overflow-hidden">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-heading text-4xl md:text-6xl text-deep-blue mb-8">
+              How Support Works
+            </h2>
+            <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 max-w-2xl mx-auto">
+              A simple, supportive process designed for your convenience
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {[
+              { step: "1", title: "Book a Consultation", description: "Schedule a time that works for you. Virtual consultations are available worldwide." },
+              { step: "2", title: "Personalized Guidance", description: "Receive tailored lactation and nutrition support designed specifically for your family's needs." },
+              { step: "3", title: "Ongoing Support", description: "Access to community resources and continued care as you progress through your feeding journey." }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="relative"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-accent-gold text-deep-blue rounded-full flex items-center justify-center mb-6 font-heading text-2xl font-bold">
+                    {item.step}
+                  </div>
+                  <h3 className="font-heading text-2xl text-deep-blue mb-4">{item.title}</h3>
+                  <p className="font-paragraph text-base text-dusty-blue/70">{item.description}</p>
+                </div>
+                {idx < 2 && (
+                  <div className="hidden md:block absolute top-8 -right-6 w-12 h-1 bg-gradient-to-r from-accent-gold to-transparent" />
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE LACTONOURISH */}
+      <section className="w-full py-32 bg-cream relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -202,7 +294,7 @@ export default function HomePage() {
               { value: "3+", label: "Years of Experience" },
               { value: "500+", label: "Families Supported" },
               { value: "CLC", label: "Certified Lactation Counselor" },
-              { value: "RD", label: "Nutritionist specializing in Maternal & Child Health" },
+              { value: "✓", label: "Nutritionist specializing in Maternal & Child Health" },
               { value: "🌍", label: "Virtual Support Worldwide" },
               { value: "✓", label: "Gentle, evidence-based, non-judgmental approach" }
             ].map((stat, idx) => (

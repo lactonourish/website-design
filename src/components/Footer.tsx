@@ -3,20 +3,23 @@ import { Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-soft-cream border-t border-dusty-blue/10">
+    <footer className="w-full bg-deep-blue text-white">
       <div className="max-w-[100rem] mx-auto px-5 md:px-20 py-16">
         <div className="grid md:grid-cols-2 gap-12 mb-12">
           {/* Brand Section */}
           <div>
-            <h3 className="font-heading text-2xl text-deep-blue font-bold mb-2">
+            <h3 className="font-heading text-2xl text-white font-bold mb-2">
               LactoNourish
             </h3>
-            <p className="font-paragraph text-base text-dusty-blue mb-6">
+            <p className="font-paragraph text-base text-white/90 mb-2">
               Lactation & Maternal Nutrition Support
+            </p>
+            <p className="font-paragraph text-base text-white/90 mb-6">
+              Virtual Support Available Worldwide
             </p>
             <a
               href="mailto:lactoloves@gmail.com"
-              className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors flex items-center gap-2"
+              className="font-paragraph text-base text-white/90 hover:text-accent-gold transition-colors flex items-center gap-2"
             >
               <Mail className="w-4 h-4" />
               lactoloves@gmail.com
@@ -25,30 +28,30 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-lg text-deep-blue mb-6 font-semibold">Quick Links</h4>
+            <h4 className="font-heading text-lg text-white mb-6 font-semibold">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
+                <Link to="/" className="font-paragraph text-base text-white/90 hover:text-accent-gold transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
+                <Link to="/about" className="font-paragraph text-base text-white/90 hover:text-accent-gold transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
+                <Link to="/services" className="font-paragraph text-base text-white/90 hover:text-accent-gold transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
+                <Link to="/blog" className="font-paragraph text-base text-white/90 hover:text-accent-gold transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
+                <Link to="/contact" className="font-paragraph text-base text-white/90 hover:text-accent-gold transition-colors">
                   Contact
                 </Link>
               </li>
@@ -57,9 +60,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-dusty-blue/10 text-center">
-          <p className="font-paragraph text-sm text-dusty-blue/70">
-            © {new Date().getFullYear()} LactoNourish. All rights reserved.
+        <div className="pt-8 border-t border-white/10 text-center">
+          <p className="font-paragraph text-sm text-white/70">
+            © 2026 LactoNourish
           </p>
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function AboutPage() {
     {
       icon: Users,
       title: '500+ Families Supported',
-      description: 'Honored to have guided families across India, USA, and worldwide on their feeding journeys'
+      description: 'Honored to have guided families through virtual consultations worldwide'
     },
     {
       icon: Heart,
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <div className="space-y-4 font-paragraph text-base text-dusty-blue/80 leading-relaxed">
                 <p>Motherhood is beautiful, powerful, and sometimes overwhelming. There are moments when you're unsure if you're doing it right, when feeding challenges feel isolating, or when your body and mind need extra care. That's where LactoNourish comes in.</p>
                 <p>LactoNourish is a growing community built on trust, education, and evidence-based support. We focus on supporting mother-baby dyads through education, guidance, and compassionate care—helping you feel confident, nourished, and supported through every stage of your feeding journey.</p>
-                <p>With over 3 years of experience and 500+ families supported across India, the USA, and worldwide through virtual consultations, LactoNourish combines certified lactation counseling with maternal nutrition expertise. Whether you're navigating breastfeeding challenges, recovering postpartum, or introducing your baby to solid foods, we're here to guide you with evidence-based advice and genuine compassion.</p>
+                <p>With over 3 years of experience and 500+ families supported through virtual consultations worldwide, LactoNourish combines certified lactation counseling with maternal nutrition expertise. Whether you're navigating breastfeeding challenges, recovering postpartum, or introducing your baby to solid foods, we're here to guide you with evidence-based advice and genuine compassion.</p>
               </div>
             </motion.div>
 

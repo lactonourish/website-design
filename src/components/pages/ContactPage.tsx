@@ -96,11 +96,8 @@ export default function ContactPage() {
                   <h3 className="font-heading text-xl text-foreground mb-2">
                     Availability
                   </h3>
-                  <p className="font-paragraph text-base text-foreground mb-2">
-                    Virtual consultations available in India, USA, and worldwide
-                  </p>
-                  <p className="font-paragraph text-sm text-foreground/70">
-                    Online support group for mothers
+                  <p className="font-paragraph text-base text-foreground">
+                    Virtual Support Available Worldwide
                   </p>
                 </CardContent>
               </Card>
