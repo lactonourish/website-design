@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Me', path: '/about' },
+    { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
@@ -18,12 +19,15 @@ export default function Header() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-secondary/30">
-      <div className="max-w-[100rem] mx-auto px-5 md:px-20 py-5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-soft-cream/95 backdrop-blur-sm border-b border-dusty-blue/10">
+      <div className="max-w-[100rem] mx-auto px-5 md:px-20 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="font-heading text-2xl md:text-3xl text-primary font-bold">LactoNourish</span>
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center">
+              <span className="font-heading text-lg text-accent-gold font-bold">L</span>
+            </div>
+            <span className="font-heading text-xl md:text-2xl text-deep-blue font-bold">LactoNourish</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,17 +36,17 @@ export default function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-paragraph text-base transition-colors ${
+                className={`font-paragraph text-sm transition-colors ${
                   isActive(link.path)
-                    ? 'text-primary font-semibold'
-                    : 'text-foreground hover:text-primary'
+                    ? 'text-accent-gold font-semibold'
+                    : 'text-dusty-blue hover:text-accent-gold'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
             <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 font-semibold text-sm">
+              <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-6 py-2 font-semibold text-sm">
                 Book Now
               </Button>
             </Link>
@@ -50,7 +54,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-dusty-blue"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -68,15 +72,15 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className={`font-paragraph text-base transition-colors ${
                   isActive(link.path)
-                    ? 'text-primary font-semibold'
-                    : 'text-foreground hover:text-primary'
+                    ? 'text-accent-gold font-semibold'
+                    : 'text-dusty-blue hover:text-accent-gold'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 font-semibold text-sm w-full">
+              <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-6 py-2 font-semibold text-sm w-full">
                 Book Now
               </Button>
             </Link>

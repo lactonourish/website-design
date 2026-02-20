@@ -1,132 +1,64 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState } from 'react';
+import { Mail } from 'lucide-react';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 3000);
-    }
-  };
-
   return (
-    <footer className="w-full bg-muted-peach border-t border-secondary/30">
-      <div className="max-w-[100rem] mx-auto px-5 md:px-20 py-16 md:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="w-full bg-soft-cream border-t border-dusty-blue/10">
+      <div className="max-w-[100rem] mx-auto px-5 md:px-20 py-16">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           {/* Brand Section */}
           <div>
-            <h3 className="font-heading text-2xl text-primary font-bold mb-4">
+            <h3 className="font-heading text-2xl text-deep-blue font-bold mb-2">
               LactoNourish
             </h3>
-            <p className="font-paragraph text-base text-foreground leading-relaxed mb-2">
+            <p className="font-paragraph text-base text-dusty-blue mb-6">
               Lactation & Maternal Nutrition Support
-            </p>
-            <p className="font-paragraph text-sm text-foreground/70 mb-6">
-              Virtual Care — India | USA | Worldwide
             </p>
             <a
               href="mailto:lactoloves@gmail.com"
-              className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
+              className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors flex items-center gap-2"
             >
+              <Mail className="w-4 h-4" />
               lactoloves@gmail.com
             </a>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-xl text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-heading text-lg text-deep-blue mb-6 font-semibold">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+                <Link to="/" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
-                  About Me
+                <Link to="/about" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
+                  About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+                <Link to="/services" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+                <Link to="/blog" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="font-paragraph text-base text-dusty-blue hover:text-accent-gold transition-colors">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-heading text-xl text-foreground mb-4">Get in Touch</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <a
-                  href="mailto:lactoloves@gmail.com"
-                  className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
-                >
-                  lactoloves@gmail.com
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="font-paragraph text-base text-foreground">
-                  India, USA & Online Worldwide
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-heading text-xl text-foreground mb-4">Newsletter</h4>
-            <p className="font-paragraph text-base text-foreground mb-4">
-              Subscribe for tips, resources, and updates.
-            </p>
-            <form onSubmit={handleSubscribe} className="space-y-3">
-              <Input
-                type="email"
-                placeholder="Your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="rounded-full border-secondary bg-background"
-              />
-              <Button
-                type="submit"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full font-semibold"
-              >
-                Subscribe
-              </Button>
-              {subscribed && (
-                <p className="font-paragraph text-sm text-primary">
-                  Thank you for subscribing!
-                </p>
-              )}
-            </form>
-          </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-secondary/50 text-center">
-          <p className="font-paragraph text-sm text-foreground/70">
+        <div className="pt-8 border-t border-dusty-blue/10 text-center">
+          <p className="font-paragraph text-sm text-dusty-blue/70">
             © {new Date().getFullYear()} LactoNourish. All rights reserved.
           </p>
         </div>
