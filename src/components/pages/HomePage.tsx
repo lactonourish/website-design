@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Baby, BookOpen, Calendar, CheckCircle, ChevronRight, ArrowRight, Sparkles, Droplets, Users } from 'lucide-react';
+import { Heart, Baby, BookOpen, Calendar, CheckCircle, ChevronRight, ArrowRight, Sparkles, Droplets, Users, Award, Leaf, Users2, Smile } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
@@ -113,27 +113,17 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-dusty-blue/20 backdrop-blur-sm w-fit mb-8 shadow-sm">
-              <Sparkles className="w-4 h-4 text-accent-gold" />
-              <span className="text-sm font-bold text-deep-blue tracking-wide uppercase">Maternal & Infant Health Support</span>
-            </div>
-            
-            <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl text-deep-blue mb-10 leading-[1.05] font-bold">
-              Confident Motherhood Starts With <span className="text-accent-gold italic">Gentle Support</span>
+            <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl text-deep-blue mb-6 leading-[1.05] font-bold">
+              Compassionate Care for Confident Motherhood
             </h1>
             
-            <p className="font-paragraph text-xl md:text-2xl text-dusty-blue mb-12 leading-relaxed max-w-2xl font-semibold">
-              Lactation guidance, postpartum nutrition, and infant feeding support rooted in care and evidence.
+            <p className="font-paragraph text-xl md:text-2xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold">
+              You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-5">
-              <Link to="/contact">
+            <div className="flex flex-col sm:flex-row gap-5 mt-12">
+              <Link to="/community">
                 <Button className="h-16 px-12 rounded-full bg-accent-gold hover:bg-accent-gold/90 text-deep-blue text-lg font-bold shadow-lg shadow-accent-gold/20 transition-all hover:scale-105 hover:shadow-xl">
-                  Book a Consultation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" className="h-16 px-12 rounded-full border-2 border-dusty-blue text-deep-blue hover:bg-dusty-blue/10 text-lg font-bold transition-all hover:scale-105 bg-transparent">
                   Join the Community
                 </Button>
               </Link>
@@ -184,11 +174,43 @@ export default function HomePage() {
 
         {/* Scroll Arrow */}
         <div className="relative z-10 pb-8">
-          <ScrollArrow targetId="who-support" />
+          <ScrollArrow targetId="trust-boxes" />
         </div>
       </section>
 
-      {/* WHO I SUPPORT SECTION */}
+      {/* TRUST BOXES SECTION */}
+      <section id="trust-boxes" className="w-full py-20 px-5 md:px-12 lg:px-20 bg-soft-cream">
+        <div className="max-w-[100rem] mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Users2, title: "Trusted by 500+ Families", description: "Supporting mothers worldwide" },
+              { icon: Award, title: "Certified Lactation Counsellor (CLC)", description: "Expert guidance & care" },
+              { icon: Leaf, title: "Nutritionist specializing in Maternal & Child Health", description: "Evidence-based support" },
+              { icon: Smile, title: "Personalized, Culturally Aware Support", description: "Your journey, your way" }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 text-center border border-dusty-blue/10 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 bg-accent-gold/20 rounded-full flex items-center justify-center text-accent-gold">
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                  </div>
+                  <h3 className="font-heading text-lg text-deep-blue mb-2 font-bold">{item.title}</h3>
+                  <p className="font-paragraph text-sm text-dusty-blue/70">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE SUPPORT SECTION */}
       <section id="who-support" className="w-full py-32 bg-cream relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div
@@ -199,7 +221,7 @@ export default function HomePage() {
             className="text-center mb-20"
           >
             <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
-              Who I Support
+              Who We Support
             </h2>
             <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 max-w-2xl mx-auto">
               LactoNourish is here for families at every stage of their feeding journey
@@ -209,24 +231,24 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
-                title: "New Mothers", 
-                description: "Navigating breastfeeding with confidence and support",
-                image: "https://static.wixstatic.com/media/7adb49_093d2b0649f74b1182e7b181b2c1517b~mv2.png"
-              },
-              { 
                 title: "Expecting Parents", 
-                description: "Preparing for a smooth breastfeeding start",
-                image: "https://static.wixstatic.com/media/7adb49_5cbf2d4efd8a4058a9e9cebaab81f810~mv2.png"
+                description: "Supporting you before your baby arrives",
+                image: "https://static.wixstatic.com/media/7adb49_da11e226c21c4fe4ab58c6cd25a20cc1~mv2.png"
               },
               { 
-                title: "Families Facing Challenges", 
-                description: "Overcoming feeding difficulties with expert guidance",
-                image: "https://static.wixstatic.com/media/7adb49_ba14d97899074d59b0e007449d1890fe~mv2.png"
+                title: "New Mothers", 
+                description: "Guiding you through breastfeeding with confidence and care",
+                image: "https://static.wixstatic.com/media/7adb49_bd5881e4a06d46b5b0499a5947ab983a~mv2.png"
               },
               { 
-                title: "Parents Starting Solids", 
-                description: "Introducing complementary feeding with ease",
-                image: "https://static.wixstatic.com/media/7adb49_1974d1cb72704e7b9624c88015c5cf1d~mv2.png"
+                title: "When It's Difficult", 
+                description: "Helping you find calm in challenging feeding moments with expert guidance",
+                image: "https://static.wixstatic.com/media/7adb49_b24c88f18ca046f28bfb79b07c57de97~mv2.png"
+              },
+              { 
+                title: "Starting Solids", 
+                description: "Supporting you as your baby explores their first foods",
+                image: "https://static.wixstatic.com/media/7adb49_672401ab3f45420784035d7fd87f926f~mv2.png"
               }
             ].map((item, idx) => (
               <motion.div
@@ -276,9 +298,9 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {[
-              { step: "1", title: "Book a Consultation", description: "Schedule a time that works for you. Virtual consultations are available worldwide." },
-              { step: "2", title: "Personalized Guidance", description: "Receive tailored lactation and nutrition support designed specifically for your family's needs." },
-              { step: "3", title: "Ongoing Support", description: "Access to community resources and continued care as you progress through your feeding journey." }
+              { icon: "🐣", title: "Book a Consultation", description: "Schedule a time that works for you. Virtual consultations are available worldwide." },
+              { icon: "🧘", title: "Personalized Guidance", description: "Receive lactation and nutrition support that truly fits your family's needs." },
+              { icon: "🚶", title: "Ongoing Support", description: "Access to community resources and continued care as you progress through your feeding journey." }
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -289,14 +311,14 @@ export default function HomePage() {
                 className="relative"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-accent-gold text-deep-blue rounded-full flex items-center justify-center mb-6 font-heading text-2xl font-bold">
-                    {item.step}
+                  <div className="text-5xl mb-6">
+                    {item.icon}
                   </div>
                   <h3 className="font-heading text-2xl text-deep-blue mb-4 font-bold">{item.title}</h3>
                   <p className="font-paragraph text-base text-dusty-blue/70">{item.description}</p>
                 </div>
                 {idx < 2 && (
-                  <div className="hidden md:block absolute top-8 -right-6 w-12 h-1 bg-gradient-to-r from-accent-gold to-transparent" />
+                  <div className="hidden md:block absolute top-20 -right-6 w-12 h-1 bg-gradient-to-r from-accent-gold/50 to-transparent" />
                 )}
               </motion.div>
             ))}
@@ -640,9 +662,9 @@ export default function HomePage() {
                   Book a consultation or join our community for ongoing support and connection.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact">
+                  <Link to="/appointment">
                     <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-12 py-8 text-xl font-semibold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
-                      Book Consultation
+                      Let's Talk
                     </Button>
                   </Link>
                   <Link to="/services">

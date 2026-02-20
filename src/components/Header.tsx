@@ -50,9 +50,9 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link to="/contact">
+            <Link to="/appointment">
               <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-3 font-bold text-base">
-                Book Now
+                Let's Talk
               </Button>
             </Link>
           </nav>
@@ -84,9 +84,9 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/appointment" onClick={() => setIsMenuOpen(false)}>
               <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-3 font-bold text-base w-full">
-                Book Now
+                Let's Talk
               </Button>
             </Link>
           </nav>
