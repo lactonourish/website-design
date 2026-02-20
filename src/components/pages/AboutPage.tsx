@@ -33,7 +33,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-soft-cream">
       <Header />
-      
       {/* Hero Section */}
       <section className="w-full max-w-[100rem] mx-auto px-5 md:px-20 pt-32 pb-16 md:pt-40 md:pb-24 relative min-h-[60vh] flex flex-col items-center justify-center">
         <motion.div
@@ -53,7 +52,6 @@ export default function AboutPage() {
         {/* Scroll Arrow */}
         <ScrollArrow targetId="about-intro" />
       </section>
-
       {/* Introduction Section */}
       <section id="about-intro" className="w-full bg-cream py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -85,18 +83,19 @@ export default function AboutPage() {
             >
               <div className="rounded-3xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://static.wixstatic.com/media/7adb49_e30e675b3dd14de097c339d836aaf4b7~mv2.png"
+                  src="https://static.wixstatic.com/media/7adb49_2a8b72f8c5a346a2b7039a0985342fb9~mv2.jpg"
                   width={600}
                   className="w-full h-auto"
-                  alt="LactoNourish - Supporting maternal and infant health"
-                />
+                  originWidth={4096}
+                  originHeight={3072}
+                  focalPointX={63.58642578125}
+                  focalPointY={51.432291666666664} />
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-
-       {/* Credentials Section */}
+      {/* Credentials Section */}
       <section className="w-full py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
           <motion.div
@@ -141,7 +140,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Core Values Section */}
       <section className="w-full bg-cream py-16 md:py-24">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -204,7 +202,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Community Section */}
       <section className="w-full py-16 md:py-24 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-20">
@@ -248,7 +245,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
