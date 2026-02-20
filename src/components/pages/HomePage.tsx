@@ -99,7 +99,7 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <section 
         ref={heroRef} 
-        className="relative w-full min-h-[95vh] flex items-center pt-20 overflow-hidden"
+        className="relative w-full min-h-[100vh] flex items-center pt-24 pb-12 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-cream/50 to-soft-cream z-0" />
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-dusty-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
@@ -114,31 +114,31 @@ export default function HomePage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-dusty-blue/20 backdrop-blur-sm w-fit mb-8 shadow-sm">
               <Sparkles className="w-4 h-4 text-accent-gold" />
-              <span className="text-sm font-medium text-deep-blue tracking-wide uppercase">Maternal & Infant Health Support</span>
+              <span className="text-sm font-bold text-deep-blue tracking-wide uppercase">Maternal & Infant Health Support</span>
             </div>
             
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-deep-blue mb-8 leading-[1.1]">
+            <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl text-deep-blue mb-10 leading-[1.05] font-bold">
               Confident Motherhood Starts With <span className="text-accent-gold italic">Gentle Support</span>
             </h1>
             
-            <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 mb-10 leading-relaxed max-w-xl">
+            <p className="font-paragraph text-lg md:text-2xl text-dusty-blue mb-12 leading-relaxed max-w-2xl font-medium">
               Lactation guidance, postpartum nutrition, and infant feeding support rooted in care and evidence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5">
               <Link to="/contact">
-                <Button className="h-14 px-10 rounded-full bg-accent-gold hover:bg-accent-gold/90 text-deep-blue text-lg font-medium shadow-lg shadow-accent-gold/20 transition-all hover:scale-105 hover:shadow-xl">
+                <Button className="h-16 px-12 rounded-full bg-accent-gold hover:bg-accent-gold/90 text-deep-blue text-lg font-bold shadow-lg shadow-accent-gold/20 transition-all hover:scale-105 hover:shadow-xl">
                   Book a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" className="h-14 px-10 rounded-full border-2 border-dusty-blue text-deep-blue hover:bg-dusty-blue/10 text-lg font-medium transition-all hover:scale-105 bg-transparent">
+                <Button variant="outline" className="h-16 px-12 rounded-full border-2 border-dusty-blue text-deep-blue hover:bg-dusty-blue/10 text-lg font-bold transition-all hover:scale-105 bg-transparent">
                   Join the Community
                 </Button>
               </Link>
             </div>
 
-            <div className="mt-12 flex items-center gap-4 text-sm text-dusty-blue/70 font-medium">
+            <div className="mt-16 flex items-center gap-4 text-base text-dusty-blue font-semibold">
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-dusty-blue/20 overflow-hidden" />
@@ -149,7 +149,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div 
-            className="lg:col-span-6 relative h-[60vh] lg:h-[80vh] w-full"
+            className="lg:col-span-6 relative h-[60vh] lg:h-[90vh] w-full"
             style={{ y: heroY, opacity: heroOpacity }}
           >
             <div className="absolute inset-0 bg-dusty-blue/10 rounded-[3rem] rotate-3 scale-95 transform origin-bottom-right" />
@@ -173,7 +173,7 @@ export default function HomePage() {
                   </div>
                   <span className="font-heading font-bold text-lg text-deep-blue">Certified Expert</span>
                 </div>
-                <p className="text-sm text-dusty-blue/70 leading-snug">
+                <p className="text-sm text-dusty-blue leading-snug font-medium">
                   Certified Lactation Counselor (CLC) & Nutritionist specializing in Maternal & Child Health
                 </p>
               </motion.div>

@@ -61,11 +61,14 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="order-2 md:order-1"
             >
-              <h2 className="font-heading text-3xl md:text-4xl text-deep-blue mb-6">Supporting Mother-Baby Dyads</h2>
-              <div className="space-y-4 font-paragraph text-base text-dusty-blue/80 leading-relaxed">
-                <p>Motherhood is beautiful, powerful, and sometimes overwhelming. There are moments when you're unsure if you're doing it right, when feeding challenges feel isolating, or when your body and mind need extra care. That's where LactoNourish comes in.</p>
-                <p>LactoNourish is a growing community built on trust, education, and evidence-based support. We focus on supporting mother-baby dyads through education, guidance, and compassionate care—helping you feel confident, nourished, and supported through every stage of your feeding journey.</p>
-                <p>With over 3 years of experience and 500+ families supported through virtual consultations worldwide, LactoNourish combines certified lactation counseling with maternal nutrition expertise. Whether you're navigating breastfeeding challenges, recovering postpartum, or introducing your baby to solid foods, we're here to guide you with evidence-based advice and genuine compassion.</p>
+              <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-6 font-bold">About Me</h2>
+              <div className="space-y-6 font-paragraph text-base md:text-lg text-dusty-blue leading-relaxed">
+                <p className="font-medium">Hi, I'm Ananyaa.</p>
+                <p>I'm a Certified Lactation Counselor (CLC) and Nutritionist specializing in maternal and child health, and the heart behind LactoNourish.</p>
+                <p>My journey into this field began with a deep desire to make motherhood feel less overwhelming and more supported. Over the past three years, I've had the privilege of guiding more than 500 families through breastfeeding challenges, postpartum recovery, and early infant feeding milestones.</p>
+                <p>I created LactoNourish as a space where science meets compassion — where mothers and babies are supported as a dyad, and where education empowers families to make confident, informed decisions.</p>
+                <p>My approach is gentle, practical, and evidence-based. I believe every feeding journey is unique, and every mother deserves care that respects her story.</p>
+                <p>As this community continues to grow, my mission remains simple: to nurture, educate, and walk alongside families in one of the most transformative seasons of their lives.</p>
               </div>
             </motion.div>
 

@@ -55,7 +55,7 @@ export default function ContactPage() {
             Let's Connect
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-            I'm here to support you with questions about breastfeeding, postpartum nutrition, or infant feeding. Reach out anytime—I'd love to hear from you. I typically respond within 24-48 hours.
+            Have questions about breastfeeding, postpartum nutrition, or infant feeding? I'd love to hear from you. I typically respond within 24-48 hours.
           </p>
         </motion.div>
       </section>
@@ -254,7 +254,7 @@ export default function ContactPage() {
               Motherhood can feel overwhelming, but you have support. Whether you're struggling with breastfeeding, navigating postpartum recovery, or wondering about your baby's feeding, I'm here for you.
             </p>
             <p className="font-paragraph text-lg text-foreground leading-relaxed">
-              Reach out with your questions, concerns, or just to chat. I'm here to support you every step of the way. <span className="font-semibold">I'm here to support you.</span>
+              Reach out with your questions, concerns, or just to chat. I'm here to support you every step of the way.
             </p>
           </motion.div>
         </div>
