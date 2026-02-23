@@ -170,7 +170,8 @@ export default function HomePage() {
               { value: "CLC", label: "Certified Lactation Counselor" },
               { value: "✓", label: "Nutritionist specializing in Maternal & Child Health" },
               { value: "🌍", label: "Virtual Support Worldwide" },
-              { value: "✓", label: "Gentle, evidence-based, non-judgmental approach" }
+              { value: "✓", label: "Gentle, evidence-based, non-judgmental approach" },
+              { value: "✓", label: "Personalized, Culturally Aware Support (Your journey, your way)" }
             ].map((stat, idx) => (
               <motion.div
                 key={idx}
