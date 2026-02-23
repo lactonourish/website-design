@@ -113,7 +113,7 @@ export default function HomePage() {
           >
             <h1 className="font-heading md:text-7xl mb-6 not-italic no-underline text-primary lg:text-7xl text-7xl"><span className="font-normal not-italic no-underline text-primary text-7xl">Compassionate Care for</span> <span className="font-normal not-italic no-underline text-primary text-7xl">Confident Motherhood</span></h1>
             <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-lg">
-              La leche materna es néctar divino.
+              You're not alone; LactoNourish is with you at every stage of your feeding journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 mt-12">
 
