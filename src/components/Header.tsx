@@ -32,7 +32,7 @@ export default function Header() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="font-heading text-2xl md:text-3xl text-white font-bold">LactoNourish</span>
+            <span className="font-heading text-white font-bold text-3xl md:text-4xl">LactoNourish</span>
           </Link>
 
           {/* Desktop Navigation */}
