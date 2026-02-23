@@ -43,7 +43,7 @@ export default function ScrollArrow({ targetId, className = '' }: ScrollArrowPro
         className="p-3 rounded-full bg-white/30 backdrop-blur-sm border border-white/50 hover:bg-white/50 transition-colors"
         aria-label="Scroll to next section"
       >
-        <ChevronDown className="w-6 h-6 text-white" />
+
       </motion.button>
     </motion.div>
   );

@@ -149,6 +149,56 @@ export default function HomePage() {
         </div>
       </section>
       {/* TRUST BOXES SECTION */}
+      <section id="why-choose" className="w-full py-32 bg-cream relative overflow-hidden">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
+              Why Choose <span className="text-accent-gold">LactoNourish</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              { value: "3+", label: "Years of Experience" },
+              { value: "500+", label: "Families Supported" },
+              { value: "CLC", label: "Certified Lactation Counselor" },
+              { value: "✓", label: "Nutritionist specializing in Maternal & Child Health" },
+              { value: "🌍", label: "Virtual Support Worldwide" },
+              { value: "✓", label: "Gentle, evidence-based, non-judgmental approach" }
+            ].map((stat, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="text-center"
+              >
+                <div className="font-heading text-3xl md:text-4xl text-accent-gold font-bold mb-2">{stat.value}</div>
+                <div className="text-sm md:text-base text-dusty-blue/70 font-paragraph">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="pt-16 border-t border-dusty-blue/10 text-center max-w-3xl mx-auto"
+          >
+            <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 leading-relaxed">
+              LactoNourish is a growing community built on trust, education, and evidence-based support. I'm here to help you and your baby thrive through every stage of your feeding journey.
+            </p>
+          </motion.div>
+        </div>
+      </section>
       <section id="trust-boxes" className="w-full py-20 px-5 md:px-12 lg:px-20 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -294,56 +344,6 @@ export default function HomePage() {
         </div>
       </section>
       {/* WHY CHOOSE LACTONOURISH */}
-      <section id="why-choose" className="w-full py-32 bg-cream relative overflow-hidden">
-        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-20"
-          >
-            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
-              Why Choose <span className="text-accent-gold">LactoNourish</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {[
-              { value: "3+", label: "Years of Experience" },
-              { value: "500+", label: "Families Supported" },
-              { value: "CLC", label: "Certified Lactation Counselor" },
-              { value: "✓", label: "Nutritionist specializing in Maternal & Child Health" },
-              { value: "🌍", label: "Virtual Support Worldwide" },
-              { value: "✓", label: "Gentle, evidence-based, non-judgmental approach" }
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="text-center"
-              >
-                <div className="font-heading text-3xl md:text-4xl text-accent-gold font-bold mb-2">{stat.value}</div>
-                <div className="text-sm md:text-base text-dusty-blue/70 font-paragraph">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="pt-16 border-t border-dusty-blue/10 text-center max-w-3xl mx-auto"
-          >
-            <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 leading-relaxed">
-              LactoNourish is a growing community built on trust, education, and evidence-based support. I'm here to help you and your baby thrive through every stage of your feeding journey.
-            </p>
-          </motion.div>
-        </div>
-      </section>
       {/* SERVICES SECTION */}
       <section className="w-full py-32 bg-cream relative">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent" />
