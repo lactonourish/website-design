@@ -127,7 +127,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div 
-            className="lg:col-span-6 relative h-[60vh] lg:h-[90vh] w-full"
+            className="lg:col-span-6 relative h-[42vh] lg:h-[63vh] w-full"
             style={{ y: heroY, opacity: heroOpacity }}
           >
             <div className="absolute inset-0 bg-dusty-blue/10 rounded-[3rem] rotate-3 scale-95 transform origin-bottom-right" />
