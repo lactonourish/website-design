@@ -200,36 +200,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-      <section id="trust-boxes" className="w-full py-20 px-5 md:px-12 lg:px-20 bg-soft-cream">
-        <div className="max-w-[100rem] mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: Users2, title: "Trusted by 500+ Families", description: "Supporting mothers worldwide" },
-              { icon: Award, title: "Certified Lactation Counsellor (CLC)", description: "Expert guidance & care" },
-              { icon: Leaf, title: "Nutritionist specializing in Maternal & Child Health", description: "Evidence-based support" },
-              { icon: Smile, title: "Personalized, Culturally Aware Support", description: "Your journey, your way" }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 text-center border border-dusty-blue/10 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 bg-accent-gold/20 rounded-full flex items-center justify-center text-accent-gold">
-                      <item.icon className="w-6 h-6" />
-                    </div>
-                  </div>
-                  <h3 className="font-heading text-lg text-deep-blue mb-2 font-bold">{item.title}</h3>
-                  <p className="font-paragraph text-sm text-dusty-blue/70">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* WHO WE SUPPORT SECTION */}
       <section id="who-support" className="w-full py-32 bg-cream relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
@@ -298,57 +268,8 @@ export default function HomePage() {
         </div>
       </section>
       {/* HOW SUPPORT WORKS SECTION */}
-      <section id="how-works" className="w-full py-32 bg-white relative overflow-hidden">
-        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-20"
-          >
-            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
-              How Support Works
-            </h2>
-            <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 max-w-2xl mx-auto">
-              A simple, supportive process designed for your convenience
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            {[
-              { icon: "🐣", title: "Book a Consultation", description: "Schedule a time that works for you. Virtual consultations are available worldwide." },
-              { icon: "🧘", title: "Personalized Guidance", description: "Receive lactation and nutrition support that truly fits your family's needs." },
-              { icon: "🚶", title: "Ongoing Support", description: "Access to community resources and continued care as you progress through your feeding journey." }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="relative"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-5xl mb-6">
-                    {item.icon}
-                  </div>
-                  <h3 className="font-heading text-2xl text-deep-blue mb-4 font-bold">{item.title}</h3>
-                  <p className="font-paragraph text-base text-dusty-blue/70">{item.description}</p>
-                </div>
-                {idx < 2 && (
-                  <div className="hidden md:block absolute top-20 -right-6 w-12 h-1 bg-gradient-to-r from-accent-gold/50 to-transparent" />
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* WHY CHOOSE LACTONOURISH */}
-      {/* SERVICES SECTION */}
       <section className="w-full py-32 bg-cream relative">
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent" />
-        
+
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <motion.div
@@ -423,7 +344,52 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* ABOUT SECTION */}
+      <section id="how-works" className="w-full py-32 bg-white relative overflow-hidden">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-heading text-5xl md:text-6xl text-deep-blue mb-8 font-bold">
+              How Support Works
+            </h2>
+            <p className="font-paragraph text-lg md:text-xl text-dusty-blue/80 max-w-2xl mx-auto">
+              A simple, supportive process designed for your convenience
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {[
+              { icon: "🐣", title: "Book a Consultation", description: "Schedule a time that works for you. Virtual consultations are available worldwide." },
+              { icon: "🧘", title: "Personalized Guidance", description: "Receive lactation and nutrition support that truly fits your family's needs." },
+              { icon: "🚶", title: "Ongoing Support", description: "Access to community resources and continued care as you progress through your feeding journey." }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="relative"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="text-5xl mb-6">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-heading text-2xl text-deep-blue mb-4 font-bold">{item.title}</h3>
+                  <p className="font-paragraph text-base text-dusty-blue/70">{item.description}</p>
+                </div>
+                {idx < 2 && (
+                  <div className="hidden md:block absolute top-20 -right-6 w-12 h-1 bg-gradient-to-r from-accent-gold/50 to-transparent" />
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="about" className="w-full py-32 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -462,7 +428,50 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* WHY CHOOSE LACTONOURISH */}
+      {/* SERVICES SECTION */}
+      {/* ABOUT SECTION */}
       {/* BLOG PREVIEW SECTION */}
+      <section className="w-full py-24 md:py-32 px-5 md:px-12 lg:px-20">
+        <div className="max-w-[100rem] mx-auto">
+          <div className="relative rounded-[3rem] overflow-hidden bg-dusty-blue text-white">
+            <div className="absolute inset-0 opacity-10 mix-blend-multiply">
+              <Image 
+                src="https://static.wixstatic.com/media/7adb49_8c723510c057470cb1906aa0c15dfd78~mv2.png?originWidth=1152&originHeight=768" 
+                alt="Texture" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="relative z-10 px-8 py-20 md:py-32 text-center max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="font-heading text-4xl md:text-6xl mb-8 leading-tight">
+                  Ready to Start Your Journey?
+                </h2>
+                <p className="font-paragraph text-xl md:text-2xl mb-12 opacity-90 max-w-2xl mx-auto">
+                  Book a consultation or join our community for ongoing support and connection.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link to="/appointment">
+                    <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-12 py-8 text-xl font-semibold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+                      Let's Talk
+                    </Button>
+                  </Link>
+                  <Link to="/services">
+                    <Button variant="outline" className="bg-white/20 border-white/50 hover:bg-white/30 text-white rounded-full px-12 py-8 text-xl font-semibold backdrop-blur-sm transition-all">
+                      Explore Services
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="blog" className="w-full py-32 bg-white">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
           <motion.div
@@ -601,46 +610,6 @@ export default function HomePage() {
         </div>
       </section>
       {/* CTA SECTION */}
-      <section className="w-full py-24 md:py-32 px-5 md:px-12 lg:px-20">
-        <div className="max-w-[100rem] mx-auto">
-          <div className="relative rounded-[3rem] overflow-hidden bg-dusty-blue text-white">
-            <div className="absolute inset-0 opacity-10 mix-blend-multiply">
-              <Image 
-                src="https://static.wixstatic.com/media/7adb49_8c723510c057470cb1906aa0c15dfd78~mv2.png?originWidth=1152&originHeight=768" 
-                alt="Texture" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            <div className="relative z-10 px-8 py-20 md:py-32 text-center max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="font-heading text-4xl md:text-6xl mb-8 leading-tight">
-                  Ready to Start Your Journey?
-                </h2>
-                <p className="font-paragraph text-xl md:text-2xl mb-12 opacity-90 max-w-2xl mx-auto">
-                  Book a consultation or join our community for ongoing support and connection.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/appointment">
-                    <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-12 py-8 text-xl font-semibold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
-                      Let's Talk
-                    </Button>
-                  </Link>
-                  <Link to="/services">
-                    <Button variant="outline" className="bg-white/20 border-white/50 hover:bg-white/30 text-white rounded-full px-12 py-8 text-xl font-semibold backdrop-blur-sm transition-all">
-                      Explore Services
-                    </Button>
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
       <Footer />
     </div>
   );
