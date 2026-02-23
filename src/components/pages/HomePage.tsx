@@ -112,7 +112,7 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="font-heading text-6xl md:text-7xl mb-6 leading-[1.05] lg:text-6xl text-secondary-foreground not-italic"><span className="font-normal">Compassionate Care for</span> <span className="text-secondary-foreground not-italic font-normal">Confident Motherhood</span></h1>
+            <h1 className="font-heading text-6xl md:text-7xl mb-6 leading-[1.05] lg:text-6xl not-italic no-underline text-primary"><span className="font-normal not-italic no-underline text-primary">Compassionate Care for</span> <span className="font-normal not-italic no-underline text-primary">Confident Motherhood</span></h1>
             <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-lg">
               You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
             </p>
@@ -390,44 +390,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section id="about" className="w-full py-32 bg-soft-cream">
-        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-accent-gold font-semibold tracking-wider uppercase text-sm mb-4 block">About LactoNourish</span>
-              <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-8 leading-tight font-bold">
-                Supporting Mother-Baby Dyads With Care & Evidence
-              </h2>
-              <p className="font-paragraph text-lg text-dusty-blue/80 leading-relaxed mb-6">
-                LactoNourish is dedicated to supporting mothers and babies through education, guidance, and compassionate care. Every mother deserves to feel confident, nourished, and supported—without judgment or pressure.
-              </p>
-              <p className="font-paragraph text-lg text-dusty-blue/80 leading-relaxed">
-                We believe in evidence-based practices combined with emotional support, creating a space where you can thrive. Whether you're preparing for breastfeeding, navigating challenges, or seeking postpartum nutrition guidance, LactoNourish is here to walk alongside you.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl"
-            >
-              <Image
-                src="https://static.wixstatic.com/media/7adb49_03f446c523fc405f979cc05905505fed~mv2.png?originWidth=1152&originHeight=768"
-                alt="Warm, supportive environment for maternal and infant health"
-                width={600}
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
       {/* WHY CHOOSE LACTONOURISH */}
       {/* SERVICES SECTION */}
       {/* ABOUT SECTION */}
@@ -555,6 +517,44 @@ export default function HomePage() {
               </Button>
             </Link>
           </motion.div>
+        </div>
+      </section>
+      <section id="about" className="w-full py-32 bg-soft-cream">
+        <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-accent-gold font-semibold tracking-wider uppercase text-sm mb-4 block">About LactoNourish</span>
+              <h2 className="font-heading text-4xl md:text-5xl text-deep-blue mb-8 leading-tight font-bold">
+                Supporting Mother-Baby Dyads With Care & Evidence
+              </h2>
+              <p className="font-paragraph text-lg text-dusty-blue/80 leading-relaxed mb-6">
+                LactoNourish is dedicated to supporting mothers and babies through education, guidance, and compassionate care. Every mother deserves to feel confident, nourished, and supported—without judgment or pressure.
+              </p>
+              <p className="font-paragraph text-lg text-dusty-blue/80 leading-relaxed">
+                We believe in evidence-based practices combined with emotional support, creating a space where you can thrive. Whether you're preparing for breastfeeding, navigating challenges, or seeking postpartum nutrition guidance, LactoNourish is here to walk alongside you.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl"
+            >
+              <Image
+                src="https://static.wixstatic.com/media/7adb49_03f446c523fc405f979cc05905505fed~mv2.png?originWidth=1152&originHeight=768"
+                alt="Warm, supportive environment for maternal and infant health"
+                width={600}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
       {/* FAQ SECTION */}
