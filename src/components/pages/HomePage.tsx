@@ -112,7 +112,7 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="font-heading text-6xl md:text-7xl mb-6 leading-[1.05] lg:text-6xl font-normal text-secondary-foreground italic">Compassionate Care for <span className="text-secondary-foreground italic">Confident Motherhood</span></h1>
+            <h1 className="font-heading text-6xl md:text-7xl mb-6 leading-[1.05] lg:text-6xl text-secondary-foreground not-italic font-normal">Compassionate Care for <span className="text-secondary-foreground not-italic font-normal">Confident Motherhood</span></h1>
             <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-lg">
               You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
             </p>
