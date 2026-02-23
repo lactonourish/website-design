@@ -52,7 +52,7 @@ export default function Header() {
             ))}
             <Link to="/appointment">
               <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-3 font-bold text-base">
-                Let's Talk
+                Let's Connect
               </Button>
             </Link>
           </nav>
@@ -86,7 +86,7 @@ export default function Header() {
             ))}
             <Link to="/appointment" onClick={() => setIsMenuOpen(false)}>
               <Button className="bg-accent-gold hover:bg-accent-gold/90 text-deep-blue rounded-full px-8 py-3 font-bold text-base w-full">
-                Let's Talk
+                Let's Connect
               </Button>
             </Link>
           </nav>
