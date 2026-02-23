@@ -119,6 +119,13 @@ export default function HomePage() {
 
             </div>
 
+                        <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-2xl">
+              You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-5 mt-12">
+
+            </div>
+
           </motion.div>
 
           <motion.div
