@@ -1,15 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Baby, BookOpen, Calendar, CheckCircle, ChevronRight, ArrowRight, Sparkles, Droplets, Users, Award, Leaf, Users2, Smile } from 'lucide-react';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import ScrollArrow from '@/components/ScrollArrow';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import ScrollArrow from '@/components/ScrollArrow';
+import { BlogPosts, FrequentlyAskedQuestions } from '@/entities';
 import { BaseCrudService } from '@/integrations';
-import { FrequentlyAskedQuestions, BlogPosts } from '@/entities';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowRight, Baby, BookOpen, CheckCircle, ChevronRight, Droplets, Heart, Users } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   const [faqs, setFaqs] = useState<FrequentlyAskedQuestions[]>([]);
@@ -112,15 +112,8 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="font-heading md:text-7xl mb-6 not-italic no-underline text-primary lg:text-7xl text-7xl"><span className="font-normal not-italic no-underline text-primary text-7xl">Compassionate Care for</span> <span className="font-normal not-italic no-underline text-primary text-7xl">Confident Motherhood</span></h1>
-            <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-2xl">
-              You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5 mt-12">
-
-            </div>
-
-                        <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-2xl">
-              You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
+            <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-lg">
+              La leche materna es néctar divino.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 mt-12">
 
