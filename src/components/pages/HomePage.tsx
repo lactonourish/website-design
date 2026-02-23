@@ -96,7 +96,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-soft-cream overflow-clip selection:bg-accent-gold/20 selection:text-deep-blue">
       <Header />
-      
       {/* HERO SECTION */}
       <section 
         ref={heroRef} 
@@ -113,14 +112,10 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl text-deep-blue mb-6 leading-[1.05] font-bold">
-              Compassionate Care for Confident Motherhood
-            </h1>
-            
+            <h1 className="font-heading text-6xl md:text-7xl mb-6 leading-[1.05] font-bold lg:text-6xl text-secondary-foreground">Compassionate Care for Confident Motherhood</h1>
             <p className="font-paragraph text-xl md:text-2xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold">
               You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-5 mt-12">
               <Link to="/community">
                 <Button className="h-16 px-12 rounded-full bg-accent-gold hover:bg-accent-gold/90 text-deep-blue text-lg font-bold shadow-lg shadow-accent-gold/20 transition-all hover:scale-105 hover:shadow-xl">
@@ -129,14 +124,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="mt-16 flex items-center gap-4 text-base text-dusty-blue font-semibold">
-              <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-dusty-blue/20 overflow-hidden" />
-                ))}
-              </div>
-              <p>Trusted by 500+ families globally</p>
-            </div>
           </motion.div>
 
           <motion.div 
@@ -151,23 +138,7 @@ export default function HomePage() {
                 width={1200}
                 className="w-full h-full object-cover scale-105"
               />
-              
-              <motion.div 
-                className="absolute bottom-10 left-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl max-w-xs border border-white/50"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-accent-gold/20 rounded-full text-accent-gold">
-                    <CheckCircle className="w-5 h-5" />
-                  </div>
-                  <span className="font-heading font-bold text-lg text-deep-blue">Certified Expert</span>
-                </div>
-                <p className="text-sm text-dusty-blue leading-snug font-medium">
-                  Certified Lactation Counselor (CLC) & Nutritionist specializing in Maternal & Child Health
-                </p>
-              </motion.div>
+
             </div>
           </motion.div>
         </div>
@@ -177,7 +148,6 @@ export default function HomePage() {
           <ScrollArrow targetId="trust-boxes" />
         </div>
       </section>
-
       {/* TRUST BOXES SECTION */}
       <section id="trust-boxes" className="w-full py-20 px-5 md:px-12 lg:px-20 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto">
@@ -209,7 +179,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* WHO WE SUPPORT SECTION */}
       <section id="who-support" className="w-full py-32 bg-cream relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
@@ -277,7 +246,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* HOW SUPPORT WORKS SECTION */}
       <section id="how-works" className="w-full py-32 bg-white relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
@@ -325,7 +293,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* WHY CHOOSE LACTONOURISH */}
       <section id="why-choose" className="w-full py-32 bg-cream relative overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
@@ -377,7 +344,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* SERVICES SECTION */}
       <section className="w-full py-32 bg-cream relative">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent" />
@@ -456,7 +422,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ABOUT SECTION */}
       <section id="about" className="w-full py-32 bg-soft-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
@@ -496,7 +461,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* BLOG PREVIEW SECTION */}
       <section id="blog" className="w-full py-32 bg-white">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
@@ -583,7 +547,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* FAQ SECTION */}
       <section id="faq" className="w-full py-32 bg-cream">
         <div className="max-w-[100rem] mx-auto px-5 md:px-12 lg:px-20">
@@ -636,7 +599,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA SECTION */}
       <section className="w-full py-24 md:py-32 px-5 md:px-12 lg:px-20">
         <div className="max-w-[100rem] mx-auto">
@@ -678,7 +640,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
