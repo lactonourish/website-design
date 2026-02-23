@@ -133,11 +133,11 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-dusty-blue/10 rounded-[3rem] rotate-3 scale-95 transform origin-bottom-right" />
             <div className="relative h-full w-full rounded-[3rem] overflow-hidden shadow-2xl shadow-dusty-blue/20 border-[8px] border-white">
               <Image
-                src="https://static.wixstatic.com/media/7adb49_a4c5c3d4e928487797357c7c5ce30b29~mv2.png?originWidth=1152&originHeight=768"
-                alt="Mother gently holding and nurturing her baby in a calm environment"
+                src="https://static.wixstatic.com/media/7adb49_212819f2cfea483aab11e916c23d4a0d~mv2.png"
                 width={1200}
                 className="w-full h-full object-cover scale-105"
-              />
+                originWidth={1024}
+                originHeight={1024} />
 
             </div>
           </motion.div>
