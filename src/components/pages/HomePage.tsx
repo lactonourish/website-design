@@ -112,15 +112,13 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="font-heading text-6xl md:text-7xl mb-6 leading-[1.05] lg:text-6xl not-italic no-underline text-primary"><span className="font-normal not-italic no-underline text-primary">Compassionate Care for</span> <span className="font-normal not-italic no-underline text-primary">Confident Motherhood</span></h1>
+            <h1 className="font-heading md:text-7xl mb-6 not-italic no-underline text-primary lg:text-7xl text-7xl"><span className="font-normal not-italic no-underline text-primary text-7xl">Compassionate Care for</span> <span className="font-normal not-italic no-underline text-primary text-7xl">Confident Motherhood</span></h1>
             <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-lg">
               You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 mt-12">
               <Link to="/community">
-                <Button className="h-16 px-12 rounded-full bg-accent-gold hover:bg-accent-gold/90 text-deep-blue text-lg font-bold shadow-lg shadow-accent-gold/20 transition-all hover:scale-105 hover:shadow-xl">
-                  Join the Community
-                </Button>
+
               </Link>
             </div>
 
