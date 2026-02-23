@@ -49,6 +49,13 @@ export default function HomePage() {
 
   const services = [
     {
+      icon: BookOpen,
+      title: 'Prenatal Breastfeeding Prep',
+      description: 'Prepare for a confident start with education and practical strategies before baby arrives.',
+      benefits: ['Expectation setting', 'Practical skills', 'Community connection'],
+      link: '/services#prenatal'
+    },
+    {
       icon: Droplets,
       title: 'Lactation Consultation',
       description: 'Expert guidance for breastfeeding challenges, milk supply concerns, and latch issues.',
@@ -68,13 +75,6 @@ export default function HomePage() {
       description: 'Gentle introduction to solids and responsive feeding practices for your growing baby.',
       benefits: ['Age-appropriate guidance', 'Responsive feeding', 'Allergy awareness'],
       link: '/services#infant-feeding'
-    },
-    {
-      icon: BookOpen,
-      title: 'Prenatal Breastfeeding Prep',
-      description: 'Prepare for a confident start with education and practical strategies before baby arrives.',
-      benefits: ['Expectation setting', 'Practical skills', 'Community connection'],
-      link: '/services#prenatal'
     },
     {
       icon: Users,
@@ -97,8 +97,8 @@ export default function HomePage() {
     <div className="min-h-screen bg-soft-cream overflow-clip selection:bg-accent-gold/20 selection:text-deep-blue">
       <Header />
       {/* HERO SECTION */}
-      <section 
-        ref={heroRef} 
+      <section
+        ref={heroRef}
         className="relative w-full min-h-[85vh] flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-cream/50 to-soft-cream z-0" />
@@ -106,7 +106,7 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-accent-gold/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
 
         <div className="w-full max-w-[120rem] mx-auto px-5 md:px-12 lg:px-20 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center flex-1">
-          <motion.div 
+          <motion.div
             className="lg:col-span-6 flex flex-col justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -126,7 +126,7 @@ export default function HomePage() {
 
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="lg:col-span-6 relative h-[42vh] lg:h-[63vh] w-full"
             style={{ y: heroY, opacity: heroOpacity }}
           >
@@ -220,23 +220,23 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { 
-                title: "Expecting Parents", 
+              {
+                title: "Expecting Parents",
                 description: "Supporting you before your baby arrives",
                 image: "https://static.wixstatic.com/media/7adb49_da11e226c21c4fe4ab58c6cd25a20cc1~mv2.png"
               },
-              { 
-                title: "New Mothers", 
+              {
+                title: "New Mothers",
                 description: "Guiding you through breastfeeding with confidence and care",
                 image: "https://static.wixstatic.com/media/7adb49_bd5881e4a06d46b5b0499a5947ab983a~mv2.png"
               },
-              { 
-                title: "When It's Difficult", 
+              {
+                title: "When It's Difficult",
                 description: "Helping you find calm in challenging feeding moments with expert guidance",
                 image: "https://static.wixstatic.com/media/7adb49_b24c88f18ca046f28bfb79b07c57de97~mv2.png"
               },
-              { 
-                title: "Starting Solids", 
+              {
+                title: "Starting Solids",
                 description: "Supporting you as your baby explores their first foods",
                 image: "https://static.wixstatic.com/media/7adb49_672401ab3f45420784035d7fd87f926f~mv2.png"
               }
@@ -283,7 +283,7 @@ export default function HomePage() {
                 How I Can Support You
               </h2>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -310,16 +310,16 @@ export default function HomePage() {
                 <Link to={service.link} className="block h-full group">
                   <Card className="h-full bg-white border-none shadow-sm hover:shadow-xl transition-all duration-500 rounded-[2rem] overflow-hidden relative group-hover:-translate-y-2">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-dusty-blue/10 rounded-bl-[4rem] transition-colors group-hover:bg-dusty-blue/20" />
-                    
+
                     <CardContent className="p-8 flex flex-col h-full relative z-10">
                       <div className="w-14 h-14 bg-cream rounded-2xl flex items-center justify-center mb-6 text-accent-gold group-hover:scale-110 transition-transform duration-500">
                         <service.icon className="w-7 h-7" />
                       </div>
-                      
+
                       <h3 className="font-heading text-xl text-deep-blue mb-3 group-hover:text-accent-gold transition-colors">
                         {service.title}
                       </h3>
-                      
+
                       <p className="font-paragraph text-sm text-dusty-blue/70 leading-relaxed mb-6 flex-grow">
                         {service.description}
                       </p>
@@ -332,7 +332,7 @@ export default function HomePage() {
                           </li>
                         ))}
                       </ul>
-                      
+
                       <div className="flex items-center text-sm font-bold text-dusty-blue/50 group-hover:text-accent-gold transition-colors mt-auto">
                         Learn More <ChevronRight className="w-4 h-4 ml-1" />
                       </div>
@@ -398,13 +398,13 @@ export default function HomePage() {
         <div className="max-w-[100rem] mx-auto">
           <div className="relative rounded-[3rem] overflow-hidden bg-dusty-blue text-white">
             <div className="absolute inset-0 opacity-10 mix-blend-multiply">
-              <Image 
-                src="https://static.wixstatic.com/media/7adb49_8c723510c057470cb1906aa0c15dfd78~mv2.png?originWidth=1152&originHeight=768" 
-                alt="Texture" 
+              <Image
+                src="https://static.wixstatic.com/media/7adb49_8c723510c057470cb1906aa0c15dfd78~mv2.png?originWidth=1152&originHeight=768"
+                alt="Texture"
                 className="w-full h-full object-cover"
               />
             </div>
-            
+
             <div className="relative z-10 px-8 py-20 md:py-32 text-center max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
