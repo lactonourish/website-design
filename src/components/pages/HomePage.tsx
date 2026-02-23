@@ -103,7 +103,6 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-cream/50 to-soft-cream z-0" />
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-dusty-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-accent-gold/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
 
         <div className="w-full max-w-[120rem] mx-auto px-5 md:px-12 lg:px-20 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center flex-1">
           <motion.div
@@ -113,13 +112,11 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="font-heading md:text-7xl mb-6 not-italic no-underline text-primary lg:text-7xl text-7xl"><span className="font-normal not-italic no-underline text-primary text-7xl">Compassionate Care for</span> <span className="font-normal not-italic no-underline text-primary text-7xl">Confident Motherhood</span></h1>
-            <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-lg">
+            <p className="font-paragraph text-xl text-dusty-blue mb-4 leading-relaxed max-w-2xl font-semibold md:text-2xl">
               You're not alone; LactoNourish is with you at every stage of your Feeding Journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 mt-12">
-              <Link to="/community">
 
-              </Link>
             </div>
 
           </motion.div>
@@ -140,7 +137,6 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
-
         {/* Scroll Arrow */}
         <div className="relative z-10 pb-8">
           <ScrollArrow targetId="trust-boxes" />
